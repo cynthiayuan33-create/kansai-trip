@@ -80,6 +80,13 @@
   .fl-bar .ln{flex:1;height:1px;background:#e8e8e8;}
   .fl-stop{margin:6px 0 6px 68px;font-size:11.5px;color:var(--muted);background:#f5f5f5;border-radius:8px;padding:5px 10px;}
   .fl-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
+  .seg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
+  .seg-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
+  .seg-label{font-size:13.5px;font-weight:700;}
+  .seg-meta{font-size:11.5px;color:var(--muted);}
+  .seg-row{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
+  .seg-time{font-weight:800;min-width:56px;color:var(--red);}
+  .seg-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
 </style>
 </head>
 <body>
@@ -102,9 +109,9 @@
   <!-- ═══ 总览 ═══ -->
   <div class="sec-title" id="overview"><span class="bar"></span>总览</div>
   <div class="city-grid">
-    <div class="city-card"><div class="cname">京都</div><div class="cdays">约 1 天</div><div class="cn">1 家</div></div>
-    <div class="city-card"><div class="cname">大阪</div><div class="cdays">约 3 天</div><div class="cn">4 家</div></div>
-    <div class="city-card"><div class="cname">神户</div><div class="cdays">约 1 天</div><div class="cn">0 家</div></div>
+    <div class="city-card"><div class="cname">京都</div><div class="cdays">Day1（下午到）</div><div class="cn">1 家</div></div>
+    <div class="city-card"><div class="cname">大阪</div><div class="cdays">Day2–4 上午</div><div class="cn">4 家</div></div>
+    <div class="city-card"><div class="cname">神户</div><div class="cdays">Day4 下午 + Day5 上午</div><div class="cn">0 家</div></div>
   </div>
   <div class="summary">共 <b>5</b> 家 · 美食 <b>3</b> 家 · 购物 <b>2</b> 家</div>
 
@@ -123,9 +130,18 @@
   </div>
   <div class="day"><div class="day-head"><span class="day-num">Day 2</span><span class="day-date">10/3 周六</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 3</span><span class="day-date">10/4 周日</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
-  <div class="day"><div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day">
-    <div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户</span></div>
+    <div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪 → 神户</span></div>
+    <div class="seg">
+      <div class="seg-head"><span class="seg-label">🚄 中午 大阪 → 神户</span><span class="seg-meta">梅田 → 三宫 约 30 分钟（阪急 / 阪神 / JR）</span></div>
+      <div class="seg-row"><span class="seg-time">上午</span><span>大阪</span></div>
+      <div class="seg-row"><span class="seg-time">下午</span><span>神户 —— 有整整一个下午</span></div>
+      <div class="seg-note">📌 若当晚住神户，Day5 去机场更顺：三宫 → 神户机场 UKB · Port Liner 约 18 分钟，不用早上从大阪赶过来。</div>
+    </div>
+    <div class="day-empty">神户店铺待记录 —— 到下方清单点 ＋加入行程 添加</div>
+  </div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户 · UKB 返程</span></div>
     <div class="flight">
       <div class="fl-head"><span class="fl-label">✈️ 返程 · 星宇航空 JX835 / JX205</span><span class="fl-meta">经济舱 · 有餐食 · 行李直达 · 无需过境签</span></div>
       <div class="fl-leg"><span class="fl-time">11:40</span><span class="fl-ap">UKB 神户机场 T2</span></div>
