@@ -197,7 +197,7 @@
   <div class="sec-title" id="spots"><span class="bar"></span>景点清单 <small>仅备选 · 不排入行程</small></div>
   <div class="tip" style="margin-bottom:14px">下面这些是<b>只存清单、不进每日行程</b>的备选景点（来自你发的两张图）。⚠️ 标注「待核实 / 未证实」的是我没能从源头核实的信息，别当准数据用。</div>
 
-  <div class="city"><span class="bar"></span>大阪 <span class="count">7 处</span></div>
+  <div class="city"><span class="bar"></span>大阪 <span class="count">6 处</span></div>
   <div class="card">
     <div class="shop-head">
       <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🏛</div>
@@ -212,7 +212,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>大正时代住友家本邸旧址，造园家小川治兵衛设计的纯日式池泉回游式庭园。池心浮岛、三方假山，环绕园路+石桥+茶室凉亭，人少安静</div>
     <div class="note">⚠️ 图上写作「跪式宫」，查无此地名 —— 按图描述（皇家园林/池为中心回游式/安静人少）判定为<b>慶沢園</b>，请确认。大人 ¥300，与大阪市立美術館共通券 ¥600。TEL 06-7494-3583</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -229,7 +228,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>梅田地标：屋顶红色摩天轮；馆内扭蛋机天堂、大头贴机、年轻潮流品牌</div>
     <div class="note">⚠️ 图上归在「六甲山周边」，实际在<b>大阪梅田</b>（离六甲山约 30km），已按实际位置归入大阪。摩天轮确切营业时间与票价<b>待核实</b></div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -246,7 +244,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>キディランド 大阪梅田店（内含 <b>KIRBY'S PUPUPU MARKET</b> 大阪梅田店，星之卡比周边，10:00–21:00）、どんぐり共和国（吉卜力）、スヌーピータウンショップ、Sanrio 等</div>
     <div class="note">星のカービィ × 阪急電車 联名活动常年更替，出发前查当期内容。キディランド 北館B1F 标 TAX FREE</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -263,7 +260,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>NU茶屋町、チャスカ茶屋町、梅田ロフト 等；图上称有动漫周边、手办、谷子、异国调味食品</div>
     <div class="note">⚠️ 图上写作「恩优茶屋丁」「连接阪崎香山街」，均按<b>茶屋町</b>记录（后者疑为阪急かっぱ横丁，未核实）。图上「十月可领 2000 円优惠券（复制页面+护照）」<b>查无任何依据，标为未证实</b></div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -280,7 +276,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>十三フレンドリー・十三本町・十三元今里 三条商店街相连，全长约 500m；推荐<b>酒馒头</b>（清酒外皮+红豆馅）、みたらし団子，老铺「喜八洲総本舗」</div>
     <div class="note">⚠️ 图上写作「金渡 → 大阪十三站（约40分钟）」，「金渡」查无此地名，<b>真实起点无法识别，待确认</b>。喜八洲营业时间待核实</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「十三商店街｜酒馒头」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「十三商店街｜酒馒头」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「十三商店街｜酒馒头」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「十三商店街｜酒馒头」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「十三商店街｜酒馒头」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -297,23 +292,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>全场 300 円起的生活杂货；<b>旅行收纳</b>（分装瓶、压缩袋、收纳包、压缩毛巾）性价比高</div>
     <div class="note">⚠️ 图上归在「六甲山周边」，实际是大阪连锁杂货品牌、非六甲山独有。你选定去哪家后我补门店地址</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「3COINS｜300 円生活杂货」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「3COINS｜300 円生活杂货」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「3COINS｜300 円生活杂货」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「3COINS｜300 円生活杂货」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「3COINS｜300 円生活杂货」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
-  </div>
-
-  <div class="card">
-    <div class="shop-head">
-      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🗼</div>
-      <div class="shop-info">
-        <div class="shop-name">阿倍野ハルカス300｜展望台</div>
-        <div class="tags"><span>景点</span><span>天王寺</span><span>夜景</span><span>日本第一高楼</span></div>
-        <div class="meta">
-          <div>📍 <b>あべのハルカス 16F 售票 → 60F 展望台</b> · 大阪市阿倍野区阿倍野筋1-1-43（天王寺駅 / 近鉄大阪阿部野橋駅 直结）</div>
-          <div>🕐 9:00 – 22:00（最终入场 21:30）· 基本无休（不定休）</div>
-        </div>
-      </div>
-    </div>
-    <div class="buy"><div class="buy-label">⭐ 看点</div>高 300m 的日本第一高楼；60F 屋上回廊「HARUKAS 300」360° 露天观景，58F 空中庭園、59F 纪念品店、60F cafe&amp;bar（9:30–21:30，餐 10:30–21:00）。傍晚上去可一次收日落 + 大阪夜景，天晴能看到明石海峡大桥</div>
-    <div class="note">大人（高中生以上）当日券 ¥2,200 / 前売券 ¥1,980（2026/7/23 起改定价）；中学生・小学生票价<b>待核实</b>。售票在 16F 展望台柜台，营业开始前 10 分至结束前 30 分售票；<b>离场后不可再入场</b>。同一栋楼 1–14F 是近鉄百貨本店（可免税）；与慶沢園／天王寺公園步行约 5 分，属天王寺同一片区，可串起来走</div>
   </div>
 
   <div class="city"><span class="bar"></span>京都 <span class="count">4 处</span></div>
@@ -331,7 +309,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>渡月橋、天龍寺庭园、竹林小径、百年老铺与传统茶屋；图上推荐<b>豆腐味冰淇淋</b></div>
     <div class="note">图上写作「阪急蓝山县」，即<b>阪急嵐山線</b>。天龍寺开放时间与门票<b>待核实</b></div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -348,7 +325,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>沿保津川峡谷跑 7.3km / 约 25 分；<b>5 号車「ザ・リッチ」开放式无窗车厢</b>视野最好，看峡谷最爽</div>
     <div class="note">图上写作「作业室 → 作业游览小火车」，即トロッコ列車。5 号车为指定席、<b>需提前预约</b>（官网 / e5489 / JR みどりの窓口）；票价<b>待核实</b>。官网 sagano-kanko.co.jp</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -365,7 +341,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>八坂神社（祇园祭本社）、<b>八坂庚申堂</b>（くくり猿 · 挂满彩色布猴的网红机位）、祇園<b>花見小路</b>（传统町屋老街）</div>
     <div class="note">图上写作「京都河源天池」「奇缘花界小路」「八揽神社」「八版庚申堂」，均按 祇園 / 花見小路 / 八坂神社 / 八坂庚申堂 记录。八坂庚申堂开放时间<b>待核实</b></div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="card">
@@ -382,7 +357,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>360° 全景露台，傍晚到夜里看晚霞，<b>远眺清水寺、八坂の塔、京都タワー</b>；由原清水小学校改建的酒店顶楼</div>
     <div class="note">图上写作「隐藏宝藏：京都最美日落露台酒吧，傍晚到夜晚360度看晚霞，远眺清水寺」——已核实为此处。⚠️ 13 歳以下不可入内；13–19 歳需 20 歳以上同伴</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="city"><span class="bar"></span>神户 <span class="count">1 处</span></div>
@@ -400,7 +374,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>第 17 届现代艺术祭，整座山变成户外展场；<b>奈良美智《Peace Head》</b>（已转为常设）+ <b>草間彌生《南瓜》</b>（特别寄託）等约 50 组作品</div>
     <div class="note">主催：六甲山観光 · 阪神電気鉄道。交通：阪急六甲駅 → 六甲ケーブル下駅 → 缆车约 10 分上山（山上标高 730–880m，比市区低 5–6℃）。⚠️ 图上「周末/节假日夜间灯光展」<b>未核实</b>。官网 rokkomeetsart.jp</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="sec-title" id="food"><span class="bar"></span>美食清单 <small>3 家</small></div>
