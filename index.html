@@ -7,13 +7,18 @@
 <style>
   :root{--red:#ff2442;--ink:#1a1a1a;--muted:#8a8a8a;--line:#efefef;--card:#fff;--bg:#f6f6f6;}
   *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
   body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);padding:0 16px 40px;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:760px;margin:0 auto;}
-  header{padding:20px 4px 8px;}
+  header{padding:20px 4px 6px;}
   header .tag{display:inline-block;font-size:12px;color:var(--red);background:rgba(255,36,66,.08);padding:3px 10px;border-radius:20px;letter-spacing:1px;}
   header h1{font-size:24px;font-weight:800;margin:8px 0 4px;}
   header .sub{font-size:13px;color:var(--muted);}
-  .sec-title{margin:22px 0 12px;font-size:19px;font-weight:800;display:flex;align-items:center;gap:8px;}
+  /* 目录导航 */
+  nav.toc{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:6px;padding:12px 0;overflow-x:auto;margin-top:6px;}
+  nav.toc a{flex:none;font-size:13px;color:#555;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 14px;}
+  nav.toc a.on{background:var(--red);color:#fff;border-color:var(--red);font-weight:600;}
+  .sec-title{margin:22px 0 12px;font-size:19px;font-weight:800;display:flex;align-items:center;gap:8px;scroll-margin-top:56px;}
   .sec-title .bar{width:5px;height:19px;background:var(--red);border-radius:3px;}
   .sec-title small{font-size:12px;color:var(--muted);font-weight:400;}
   /* 总览 */
@@ -22,6 +27,8 @@
   .city-card .cname{font-size:15px;font-weight:700;}
   .city-card .cdays{font-size:12px;color:var(--muted);margin-top:3px;}
   .city-card .cn{border-top:1px solid var(--line);margin-top:8px;padding-top:8px;font-size:12px;color:var(--red);font-weight:600;}
+  .summary{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:13px;color:#555;}
+  .summary b{color:var(--ink);}
   /* 每日行程 */
   .day{margin-bottom:14px;}
   .day-head{display:flex;align-items:baseline;gap:8px;margin:12px 2px 8px;}
@@ -62,21 +69,33 @@
     <div class="sub">2026.10.2（周五）— 10.6（周二）· 共 5 天 · 由微信群机器人自动维护</div>
   </header>
 
-  <div class="sec-title"><span class="bar"></span>总览</div>
+  <nav class="toc">
+    <a href="#overview" class="on">总览</a>
+    <a href="#daily">每日行程</a>
+    <a href="#food">美食清单</a>
+    <a href="#shopping">购物清单</a>
+    <a href="#tips">实用贴士</a>
+  </nav>
+
+  <!-- ═══ 总览 ═══ -->
+  <div class="sec-title" id="overview"><span class="bar"></span>总览</div>
   <div class="city-grid">
     <div class="city-card"><div class="cname">大阪</div><div class="cdays">约 2 天</div><div class="cn">1 家</div></div>
     <div class="city-card"><div class="cname">京都</div><div class="cdays">约 2 天</div><div class="cn">1 家</div></div>
     <div class="city-card"><div class="cname">神户</div><div class="cdays">约 1 天</div><div class="cn">0 家</div></div>
   </div>
+  <div class="summary">共 <b>2</b> 家 · 美食 <b>2</b> 家 · 购物 <b>0</b> 家</div>
 
-  <div class="sec-title"><span class="bar"></span>每日行程 <small>待排</small></div>
+  <!-- ═══ 每日行程 ═══ -->
+  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>待排</small></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 2</span><span class="day-date">10/3 周六</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 3</span><span class="day-date">10/4 周日</span><span class="day-city">京都</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">京都</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户</span></div><div class="day-empty">待排</div></div>
 
-  <div class="sec-title"><span class="bar"></span>全部清单</div>
+  <!-- ═══ 美食清单 ═══ -->
+  <div class="sec-title" id="food"><span class="bar"></span>美食清单 <small>2 家</small></div>
 
   <div class="city"><span class="bar"></span>大阪 <span class="count">1 家</span></div>
   <div class="card">
@@ -112,10 +131,12 @@
     <div class="note">📌 不可预约，门口机器抽号牌；高峰约等 40 分钟。</div>
   </div>
 
-  <div class="city"><span class="bar"></span>神户 <span class="count">0 家</span></div>
-  <div class="empty">暂无记录。</div>
+  <!-- ═══ 购物清单 ═══ -->
+  <div class="sec-title" id="shopping"><span class="bar"></span>购物清单 <small>0 家</small></div>
+  <div class="empty">暂无记录 —— 想买的店铺（药妆/中古/电器/伴手礼等）发给机器人，会自动归到这里。</div>
 
-  <div class="sec-title"><span class="bar"></span>实用贴士</div>
+  <!-- ═══ 实用贴士 ═══ -->
+  <div class="sec-title" id="tips"><span class="bar"></span>实用贴士</div>
   <div class="tip"><div class="t-head">🚇 交通</div>关西机场买 ICOCA 卡（地铁/巴士/便利店通用）；京都巴士一日券 ¥700 划算。</div>
   <div class="tip"><div class="t-head">🛍️ 免税</div>单店同日消费满 ¥5,000（不含税）免 10% 消费税，结账出示护照。</div>
   <div class="tip"><div class="t-head">💊 药妆</div>松本清/大国/唐吉诃德常有观光客优惠券，比价后再下手。</div>
