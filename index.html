@@ -69,6 +69,17 @@
   /* toast */
   #toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:rgba(0,0,0,.82);color:#fff;font-size:13px;padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:999;max-width:86vw;text-align:center;}
   #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .flight{background:var(--card);border:1px solid var(--red);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
+  .fl-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
+  .fl-label{font-size:13.5px;font-weight:700;color:var(--red);}
+  .fl-meta{font-size:11.5px;color:var(--muted);}
+  .fl-leg{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
+  .fl-time{font-weight:800;min-width:56px;font-variant-numeric:tabular-nums;}
+  .fl-ap{font-weight:600;}
+  .fl-bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:11.5px;color:var(--muted);}
+  .fl-bar .ln{flex:1;height:1px;background:#e8e8e8;}
+  .fl-stop{margin:6px 0 6px 68px;font-size:11.5px;color:var(--muted);background:#f5f5f5;border-radius:8px;padding:5px 10px;}
+  .fl-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
 </style>
 </head>
 <body>
@@ -98,12 +109,36 @@
   <div class="summary">共 <b>5</b> 家 · 美食 <b>3</b> 家 · 购物 <b>2</b> 家</div>
 
   <!-- ═══ 每日行程 ═══ -->
-  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>待排</small></div>
-  <div class="day"><div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">京都</span></div><div class="day-empty">待排</div></div>
+  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>机票已录入 · 景点待排</small></div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">京都</span></div>
+    <div class="flight">
+      <div class="fl-head"><span class="fl-label">✈️ 去程 · 澳门航空 NX856</span><span class="fl-meta">经济舱 · 中型机 320 · 有餐食 · 准点率 96.67%</span></div>
+      <div class="fl-leg"><span class="fl-time">08:20</span><span class="fl-ap">MFM 澳门国际机场</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 3h35m</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">12:55</span><span class="fl-ap">KIX 关西国际机场 T1</span></div>
+      <div class="fl-note">📌 落地后入境 + 取行李约 1 小时，HARUKA 特急至京都约 75 分钟 → 预计 <b>15:30–16:00</b> 抵达京都。中村藤吉营业到 22:00，当晚赶得上。</div>
+    </div>
+    <div class="day-empty">其余待排 —— 到下方「美食清单」点 ＋加入行程 添加</div>
+  </div>
   <div class="day"><div class="day-head"><span class="day-num">Day 2</span><span class="day-date">10/3 周六</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 3</span><span class="day-date">10/4 周日</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
-  <div class="day"><div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户</span></div><div class="day-empty">待排</div></div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户</span></div>
+    <div class="flight">
+      <div class="fl-head"><span class="fl-label">✈️ 返程 · 星宇航空 JX835 / JX205</span><span class="fl-meta">经济舱 · 有餐食 · 行李直达 · 无需过境签</span></div>
+      <div class="fl-leg"><span class="fl-time">11:40</span><span class="fl-ap">UKB 神户机场 T2</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 3h</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">13:40</span><span class="fl-ap">TPE 桃园机场 T1（台北）</span></div>
+      <div class="fl-stop">🔄 中转中国台北 · 停留 4h5m · 行李直达 · 无需过境签</div>
+      <div class="fl-leg"><span class="fl-time">17:45</span><span class="fl-ap">TPE 桃园机场 T1</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 1h55m</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">19:40</span><span class="fl-ap">MFM 澳门国际机场</span></div>
+      <div class="fl-note">📌 神户机场 T2 国际线建议提前 2 小时到 → <b>09:40 前</b>抵达 UKB（三宫 → 神户机场 Port Liner 约 18 分钟）。<b>当天上午基本只能赶飞机，神户景点建议挪到 Day2–4。</b></div>
+    </div>
+    <div class="day-empty">其余待排 —— 神户景点建议改到回程前的白天</div>
+  </div>
 
   <!-- ═══ 美食清单 ═══ -->
   <div class="sec-title" id="food"><span class="bar"></span>美食清单 <small>3 家</small></div>
