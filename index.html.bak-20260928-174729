@@ -69,25 +69,6 @@
   /* toast */
   #toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:rgba(0,0,0,.82);color:#fff;font-size:13px;padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:999;max-width:86vw;text-align:center;}
   #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-  .flight{background:var(--card);border:1px solid var(--red);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
-  .fl-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
-  .fl-label{font-size:13.5px;font-weight:700;color:var(--red);}
-  .fl-meta{font-size:11.5px;color:var(--muted);}
-  .fl-leg{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
-  .fl-time{font-weight:800;min-width:56px;font-variant-numeric:tabular-nums;}
-  .fl-ap{font-weight:600;}
-  .fl-bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:11.5px;color:var(--muted);}
-  .fl-bar .ln{flex:1;height:1px;background:#e8e8e8;}
-  .fl-stop{margin:6px 0 6px 68px;font-size:11.5px;color:var(--muted);background:#f5f5f5;border-radius:8px;padding:5px 10px;}
-  .fl-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
-  .seg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
-  .seg-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
-  .seg-label{font-size:13.5px;font-weight:700;}
-  .seg-meta{font-size:11.5px;color:var(--muted);}
-  .seg-row{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
-  .seg-time{font-weight:800;min-width:56px;color:var(--red);}
-  .seg-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
-  .hotel{background:var(--card);border:1px solid #5b8def;border-radius:12px;padding:12px 14px;margin:8px 0;}
 </style>
 </head>
 <body>
@@ -110,68 +91,19 @@
   <!-- ═══ 总览 ═══ -->
   <div class="sec-title" id="overview"><span class="bar"></span>总览</div>
   <div class="city-grid">
-    <div class="city-card"><div class="cname">京都</div><div class="cdays">Day1（下午到）</div><div class="cn">1 家</div></div>
-    <div class="city-card"><div class="cname">大阪</div><div class="cdays">Day2–4 上午</div><div class="cn">5 家</div></div>
-    <div class="city-card"><div class="cname">神户</div><div class="cdays">Day4 下午 + Day5 上午</div><div class="cn">0 家</div></div>
+    <div class="city-card"><div class="cname">京都</div><div class="cdays">约 1 天</div><div class="cn">1 家</div></div>
+    <div class="city-card"><div class="cname">大阪</div><div class="cdays">约 3 天</div><div class="cn">4 家</div></div>
+    <div class="city-card"><div class="cname">神户</div><div class="cdays">约 1 天</div><div class="cn">0 家</div></div>
   </div>
-  <div class="summary">共 <b>6</b> 家 · 美食 <b>3</b> 家 · 购物 <b>3</b> 家</div>
+  <div class="summary">共 <b>5</b> 家 · 美食 <b>3</b> 家 · 购物 <b>2</b> 家</div>
 
   <!-- ═══ 每日行程 ═══ -->
-  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>机票已录入 · 景点待排</small></div>
-  <div class="day">
-    <div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">京都</span></div>
-    <div class="flight">
-      <div class="fl-head"><span class="fl-label">✈️ 去程 · 澳门航空 NX856</span><span class="fl-meta">经济舱 · 中型机 320 · 有餐食 · 准点率 96.67%</span></div>
-      <div class="fl-leg"><span class="fl-time">08:20</span><span class="fl-ap">MFM 澳门国际机场</span></div>
-      <div class="fl-bar"><span class="ln"></span><span>飞行 3h35m</span><span class="ln"></span></div>
-      <div class="fl-leg"><span class="fl-time">12:55</span><span class="fl-ap">KIX 关西国际机场 T1</span></div>
-      <div class="fl-note">📌 落地后入境 + 取行李约 1 小时，HARUKA 特急至京都约 75 分钟 → 预计 <b>15:30–16:00</b> 抵达京都。中村藤吉营业到 22:00，当晚赶得上。</div>
-    </div>
-    <div class="hotel">
-      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 入住 · Sugata Hotel Osaka Shinsaibashi</span>
-        <span style="font-size:11.5px;color:var(--muted);">Series by Marriott · 日本首店 · Marriott Bonvoy 积分可用</span>
-      </div>
-      <div style="font-size:13px;line-height:1.7;">📍 大阪市中央区南新地2-6-25 · 地下鉄「長堀橋」駅 步行约 400m ／「心斎橋」駅 步行约 600m</div>
-      <div style="font-size:12px;color:#777;margin-top:6px;line-height:1.65;">📌 2026 年新开业（256 间），步行可达道顿堀/难波/なんばウォーク。入住 10/2 → 退房 10/5（3 晚）。</div>
-    </div>
-    <div class="day-empty">其余待排 —— 到下方「美食清单」点 ＋加入行程 添加</div>
-  </div>
+  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>待排</small></div>
+  <div class="day"><div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">京都</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 2</span><span class="day-date">10/3 周六</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
   <div class="day"><div class="day-head"><span class="day-num">Day 3</span><span class="day-date">10/4 周日</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
-  <div class="day">
-    <div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪 → 神户</span></div>
-    <div class="seg">
-      <div class="seg-head"><span class="seg-label">🚄 中午 大阪 → 神户</span><span class="seg-meta">梅田 → 三宫 约 30 分钟（阪急 / 阪神 / JR）</span></div>
-      <div class="seg-row"><span class="seg-time">上午</span><span>大阪</span></div>
-      <div class="seg-row"><span class="seg-time">下午</span><span>神户 —— 有整整一个下午</span></div>
-      <div class="seg-note">📌 若当晚住神户，Day5 去机场更顺：三宫 → 神户机场 UKB · Port Liner 约 18 分钟，不用早上从大阪赶过来。</div>
-    </div>
-    <div class="hotel">
-      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
-        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 入住 · Hotel Monte Hermana Kobe Amalie</span>
-        <span style="font-size:11.5px;color:var(--muted);">三宮駅地下鉄出口步行 3 分 · 生田神社隣</span>
-      </div>
-      <div style="font-size:13px;line-height:1.7;">📍 兵庫県神戸市中央区中山手通2-2-28 · 地下鉄「三宮」駅 西1番出口 步行约 3 分 ／ JR「三ノ宮」駅 西出口 步行约 7 分</div>
-      <div style="font-size:12px;color:#777;margin-top:6px;line-height:1.65;">📌 TEL 078-393-7111 · 180 间 · DHC アメニティ。入住 10/5 → 退房 10/6（1 晚）。退房后 Port Liner 至 UKB 约 18 分钟。</div>
-    </div>
-    <div class="day-empty">神户店铺待记录 —— 到下方清单点 ＋加入行程 添加</div>
-  </div>
-  <div class="day">
-    <div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户 · UKB 返程</span></div>
-    <div class="flight">
-      <div class="fl-head"><span class="fl-label">✈️ 返程 · 星宇航空 JX835 / JX205</span><span class="fl-meta">经济舱 · 有餐食 · 行李直达 · 无需过境签</span></div>
-      <div class="fl-leg"><span class="fl-time">11:40</span><span class="fl-ap">UKB 神户机场 T2</span></div>
-      <div class="fl-bar"><span class="ln"></span><span>飞行 3h</span><span class="ln"></span></div>
-      <div class="fl-leg"><span class="fl-time">13:40</span><span class="fl-ap">TPE 桃园机场 T1（台北）</span></div>
-      <div class="fl-stop">🔄 中转中国台北 · 停留 4h5m · 行李直达 · 无需过境签</div>
-      <div class="fl-leg"><span class="fl-time">17:45</span><span class="fl-ap">TPE 桃园机场 T1</span></div>
-      <div class="fl-bar"><span class="ln"></span><span>飞行 1h55m</span><span class="ln"></span></div>
-      <div class="fl-leg"><span class="fl-time">19:40</span><span class="fl-ap">MFM 澳门国际机场</span></div>
-      <div class="fl-note">📌 神户机场 T2 国际线建议提前 2 小时到 → <b>09:40 前</b>抵达 UKB（三宫 → 神户机场 Port Liner 约 18 分钟）。<b>当天上午基本只能赶飞机，神户景点建议挪到 Day2–4。</b></div>
-    </div>
-    <div class="day-empty">其余待排 —— 神户景点建议改到回程前的白天</div>
-  </div>
+  <div class="day"><div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪</span></div><div class="day-empty">待排</div></div>
+  <div class="day"><div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户</span></div><div class="day-empty">待排</div></div>
 
   <!-- ═══ 美食清单 ═══ -->
   <div class="sec-title" id="food"><span class="bar"></span>美食清单 <small>3 家</small></div>
@@ -267,9 +199,9 @@
   </div>
 
   <!-- ═══ 购物清单 ═══ -->
-  <div class="sec-title" id="shopping"><span class="bar"></span>购物清单 <small>3 家</small></div>
+  <div class="sec-title" id="shopping"><span class="bar"></span>购物清单 <small>2 家</small></div>
 
-  <div class="city"><span class="bar"></span>大阪 <span class="count">3 家</span></div>
+  <div class="city"><span class="bar"></span>大阪 <span class="count">2 家</span></div>
   <div class="card">
     <div class="shop-head">
       <img class="shop-img" src="https://www.chums.jp/cms/shop/img/osaka_img_001.jpg" alt="CHUMS グランフロント大阪店">
@@ -327,36 +259,6 @@
       <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
     </div>
   </div>
-
-  <div class="card">
-    <div class="shop-head">
-      <img class="shop-img" src="https://i0.wp.com/kaiten-heiten-24.com/wp-content/uploads/2024/10/152-70.jpg" alt="Air BicCamera 大丸心斎橋店">
-      <div class="shop-info">
-        <div class="shop-name">Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）</div>
-        <div class="tags"><span>购物</span><span>家电·相机</span><span>心斎橋</span><span>免税</span></div>
-        <div class="meta">
-          <div>📍 <b>大丸心斎橋店 南館 2F</b> · 大阪市中央区心斎橋筋1-7-1（心斎橋駅 6 号出口徒步约 1 分 / 地下道直结）</div>
-          <div>🕐 11:00 – 21:00 · 基本无休（除元日・1/2，以馆休为准）</div>
-        </div>
-      </div>
-    </div>
-    <div class="buy"><div class="buy-label">🛒 推荐购买</div><b>拍立得相纸</b>：富士 instax「チェキ」专用フィルム mini / SQUARE / WIDE（10 枚入 参考价 ¥990–1,100；SQUARE 2 包 ¥2,420）· 另有数码相机、美容家电、音响、腕表、游戏、行李箱</div>
-    <div class="note">📌 TAX FREE 免税店（税抜满 ¥5,000）。卖场仅约 160㎡，相纸库存以店内为准，缺货可去 ビックカメラなんば店（千日前2-10-1）。同馆 1F 是ビックカメラリカー（酒类）、3–4F 化妆品 + 免税柜台。支持「ネット取り置き」线上预留、到店取货。</div>
-    <div class="addbar">
-      <details>
-        <summary>＋ 加入行程</summary>
-        <div class="day-picker">
-          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day1')">Day1 · 10/2 京都</button>
-          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day2')">Day2 · 10/3 大阪</button>
-          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day3')">Day3 · 10/4 大阪</button>
-          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day4')">Day4 · 10/5 大阪→神户</button>
-          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day5')">Day5 · 10/6 神户</button>
-        </div>
-      </details>
-      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
-    </div>
-  </div>
-
 
 
   <!-- ═══ 实用贴士 ═══ -->
