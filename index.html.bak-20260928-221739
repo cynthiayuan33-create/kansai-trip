@@ -88,14 +88,6 @@
   .seg-time{font-weight:800;min-width:56px;color:var(--red);}
   .seg-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
   .hotel{background:var(--card);border:1px solid #5b8def;border-radius:12px;padding:12px 14px;margin:8px 0;}
-  /* 心愿list 表格 */
-  .wl-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .wl-table th{background:#faf7f6;color:var(--red);font-weight:700;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);font-size:12.5px;}
-  .wl-table td{padding:9px 12px;border-bottom:1px solid var(--line);color:#555;vertical-align:top;}
-  .wl-table tr:last-child td{border-bottom:none;}
-  .wl-table td[contenteditable]{cursor:text;min-width:60px;}
-  .wl-table td[contenteditable]:focus{background:#fff8f0;outline:2px solid rgba(255,36,66,.3);border-radius:4px;}
-  .wl-table .wl-placeholder{color:#ccc;font-style:italic;}
 </style>
 </head>
 <body>
@@ -112,7 +104,6 @@
     <a href="#daily">每日行程</a>
     <a href="#food">美食清单</a>
     <a href="#shopping">购物清单</a>
-    <a href="#wishlist">心愿list</a>
     <a href="#tips">实用贴士</a>
   </nav>
 
@@ -206,7 +197,7 @@
   <div class="sec-title" id="spots"><span class="bar"></span>景点清单 <small>仅备选 · 不排入行程</small></div>
   <div class="tip" style="margin-bottom:14px">下面这些是<b>只存清单、不进每日行程</b>的备选景点（来自你发的两张图）。⚠️ 标注「待核实 / 未证实」的是我没能从源头核实的信息，别当准数据用。</div>
 
-  <div class="city"><span class="bar"></span>大阪 <span class="count">8 处</span></div>
+  <div class="city"><span class="bar"></span>大阪 <span class="count">7 处</span></div>
   <div class="card">
     <div class="shop-head">
       <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🏛</div>
@@ -323,24 +314,6 @@
     </div>
     <div class="buy"><div class="buy-label">⭐ 看点</div>高 300m 的日本第一高楼；60F 屋上回廊「HARUKAS 300」360° 露天观景，58F 空中庭園、59F 纪念品店、60F cafe&amp;bar（9:30–21:30，餐 10:30–21:00）。傍晚上去可一次收日落 + 大阪夜景，天晴能看到明石海峡大桥</div>
     <div class="note">大人（高中生以上）当日券 ¥2,200 / 前売券 ¥1,980（2026/7/23 起改定价）；中学生・小学生票价<b>待核实</b>。售票在 16F 展望台柜台，营业开始前 10 分至结束前 30 分售票；<b>离场后不可再入场</b>。同一栋楼 1–14F 是近鉄百貨本店（可免税）；与慶沢園／天王寺公園步行约 5 分，属天王寺同一片区，可串起来走</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「阿倍野ハルカス300｜展望台」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「阿倍野ハルカス300｜展望台」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「阿倍野ハルカス300｜展望台」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「阿倍野ハルカス300｜展望台」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「阿倍野ハルカス300｜展望台」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
-  </div>
-
-  <div class="card">
-    <div class="shop-head">
-      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🎎</div>
-      <div class="shop-info">
-        <div class="shop-name">勝尾寺｜勝運の寺・达摩</div>
-        <div class="tags"><span>景点</span><span>箕面</span><span>达摩</span><span>胜运</span></div>
-        <div class="meta">
-          <div>📍 <b>大阪府箕面市粟生間谷2914-1</b>（明治の森箕面国定公園内）· 北大阪急行「箕面萱野」駅 → 阪急バス直行约 20 分 · 大阪モノレール「彩都西」駅 打车约 12 分</div>
-          <div>🕐 平日・日曜・祝日 8:00 – 17:00（最终受理 16:30）；<b>周六 8:00 – 18:00</b>（最终 17:30）</div>
-        </div>
-      </div>
-    </div>
-    <div class="buy"><div class="buy-label">⭐ 看点</div>1300 年古刹、西国三十三所第 23 番札所，本尊十一面千手観世音菩薩（本堂由丰臣秀赖再建）。招牌画面是<b>境内满地「勝ちダルマ」</b>——石垣、灯籠上、树根边到处都摆着一颗颗小达摩；还有達磨みくじ、弁天池、二階堂、多宝塔。以「<b>勝運</b>」闻名，参拜求考试／求职／比赛／商卖</div>
-    <div class="note">入山志納料：<b>大人（高中生以上）¥500 / 小・中学生 ¥400 / 未就学児 ¥100 / 2 歳以下免费</b>；官方另有「Web 入山券」，可省去现场排队。交通：御堂筋線 梅田→千里中央 → 北大阪急行 千里中央→箕面萱野 → 阪急バス直行约 20 分，<b>合计单程约 1 小时（估算，含转乘）</b>；打车从箕面萱野駅约 15 分。⚠️ 巴士 9:00–15:00 每 10 分钟一班 + 临时增班；11 月红叶季极挤、周末会滞留排长队（10 月初相对好）。府道4号<b>摩托车全天禁行</b>。就近可顺带箕面大滝、吃枫叶天妇罗。TEL 072-721-7010</div>
-    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
   </div>
 
   <div class="city"><span class="bar"></span>京都 <span class="count">4 处</span></div>
@@ -615,63 +588,6 @@
 
 
 
-  <!-- ═══ 心愿list ═══ -->
-  <div class="sec-title" id="wishlist"><span class="bar"></span>心愿list</div>
-  <div style="overflow-x:auto;">
-  <table class="wl-table">
-    <thead>
-      <tr>
-        <th style="width:18%;">品牌</th>
-        <th style="width:25%;">物品名称</th>
-        <th style="width:15%;">国内价格</th>
-        <th style="width:15%;">日本价格</th>
-        <th style="width:27%;">购买地点</th>
-      </tr>
-    </thead>
-    <tbody id="wishlist-body">
-      <tr>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-      </tr>
-      <tr>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-      </tr>
-      <tr>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-      </tr>
-      <tr>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-      </tr>
-      <tr>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-        <td contenteditable="true" class="wl-placeholder"></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
-    <button onclick="addWishRow()" style="font-size:12.5px;font-weight:600;color:#fff;background:var(--red);border:none;border-radius:18px;padding:6px 14px;cursor:pointer;font-family:inherit;">＋ 添加一行</button>
-    <span style="font-size:11.5px;color:var(--muted);">点击空格即可直接编辑 · 添加后记得截图保存</span>
-  </div>
-
   <!-- ═══ 实用贴士 ═══ -->
   <div class="sec-title" id="tips"><span class="bar"></span>实用贴士</div>
   <div class="tip"><div class="t-head">🚇 交通</div>关西机场买 ICOCA 卡（地铁/巴士/便利店通用）；京都巴士一日券 ¥700 划算。</div>
@@ -700,24 +616,6 @@
     clearTimeout(t._t);
     t._t = setTimeout(function(){ t.classList.remove('show'); }, 3200);
   }
-  function addWishRow(){
-    var tbody = document.getElementById('wishlist-body');
-    var tr = document.createElement('tr');
-    for(var i=0;i<5;i++){
-      var td = document.createElement('td');
-      td.contentEditable = 'true';
-      td.className = 'wl-placeholder';
-      tr.appendChild(td);
-    }
-    tbody.appendChild(tr);
-    tr.cells[0].focus();
-  }
-  // 心愿list: 输入时去掉 placeholder 样式
-  document.addEventListener('input', function(e){
-    if(e.target.closest('#wishlist-body')){
-      e.target.classList.toggle('wl-placeholder', e.target.textContent.trim()==='');
-    }
-  });
 </script>
 </body>
 </html>
