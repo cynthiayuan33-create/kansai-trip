@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关西旅行攻略 · 大阪·京都·神户</title>
+<style>
+  :root{--red:#ff2442;--ink:#1a1a1a;--muted:#8a8a8a;--line:#efefef;--card:#fff;--bg:#f6f6f6;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);padding:0 0 40px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px;}
+  header{padding:20px 4px 6px;}
+  header .tag{display:inline-block;font-size:12px;color:var(--red);background:rgba(255,36,66,.08);padding:3px 10px;border-radius:20px;letter-spacing:1px;}
+  header h1{font-size:24px;font-weight:800;margin:8px 0 4px;}
+  header .sub{font-size:13px;color:var(--muted);}
+  /* 目录导航 —— 固定白条，清晰可见 */
+  nav.toc{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;margin:0 -16px 14px;}
+  nav.toc a{font-size:13px;color:#333;text-decoration:none;background:#f5f5f5;border:1px solid #e5e5e5;border-radius:18px;padding:6px 14px;}
+  nav.toc a:active,nav.toc a:hover{background:var(--red);color:#fff;border-color:var(--red);}
+  .sec-title{margin:22px 0 12px;font-size:19px;font-weight:800;display:flex;align-items:center;gap:8px;scroll-margin-top:56px;}
+  .sec-title .bar{width:5px;height:19px;background:var(--red);border-radius:3px;}
+  .sec-title small{font-size:12px;color:var(--muted);font-weight:400;}
+  /* 总览 */
+  .city-grid{display:flex;gap:10px;}
+  .city-card{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;}
+  .city-card .cname{font-size:15px;font-weight:700;}
+  .city-card .cdays{font-size:12px;color:var(--muted);margin-top:3px;}
+  .city-card .cn{border-top:1px solid var(--line);margin-top:8px;padding-top:8px;font-size:12px;color:var(--red);font-weight:600;}
+  .summary{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:13px;color:#555;}
+  .summary b{color:var(--ink);}
+  /* 每日行程 */
+  .day{margin-bottom:14px;}
+  .day-head{display:flex;align-items:baseline;gap:8px;margin:12px 2px 8px;}
+  .day-num{font-size:14px;font-weight:800;color:var(--red);}
+  .day-date{font-size:13px;font-weight:700;}
+  .day-city{font-size:11px;color:#fff;background:#333;padding:2px 10px;border-radius:10px;}
+  .day-empty{background:var(--card);border:1px dashed #ddd;border-radius:10px;padding:12px;font-size:12.5px;color:var(--muted);}
+  /* 卡片 */
+  .card{background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px;border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .shop-head{display:flex;gap:12px;align-items:flex-start;}
+  .shop-img{width:110px;height:110px;border-radius:10px;object-fit:cover;flex:none;background:#eee;}
+  .shop-info{flex:1;min-width:0;}
+  .shop-name{font-size:16px;font-weight:700;line-height:1.35;}
+  .tags{margin:6px 0;display:flex;gap:6px;flex-wrap:wrap;}
+  .tags span{font-size:11px;color:var(--red);border:1px solid rgba(255,36,66,.35);padding:1px 8px;border-radius:10px;background:rgba(255,36,66,.05);}
+  .meta{font-size:12.5px;color:#555;line-height:1.7;}
+  .meta b{color:var(--ink);font-weight:600;}
+  .buy{margin-top:11px;padding:10px;background:#faf7f6;border-radius:10px;border:1px dashed #f0d9dc;font-size:12.5px;}
+  .buy .buy-label{font-size:11px;color:var(--red);font-weight:700;margin-bottom:2px;}
+  .note{margin-top:9px;font-size:12px;color:#777;line-height:1.6;}
+  /* 加入行程按钮 */
+  .addbar{margin-top:11px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .addbar summary{list-style:none;cursor:pointer;font-size:12.5px;font-weight:600;color:#fff;background:var(--red);border-radius:18px;padding:6px 14px;display:inline-block;}
+  .addbar summary::-webkit-details-marker{display:none;}
+  .addbar .hint{font-size:11.5px;color:var(--muted);}
+  .day-picker{display:flex;flex-wrap:wrap;gap:6px;width:100%;margin-top:6px;}
+  .day-picker button{font-size:12px;color:var(--red);border:1px solid rgba(255,36,66,.4);background:#fff;border-radius:14px;padding:5px 12px;cursor:pointer;font-family:inherit;}
+  .day-picker button:active{background:var(--red);color:#fff;}
+  /* 清单分组 */
+  .city{margin:16px 0 8px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .city .bar{width:4px;height:15px;background:var(--red);border-radius:2px;}
+  .city .count{font-size:12px;color:var(--muted);font-weight:400;}
+  .empty{color:var(--muted);font-size:13px;padding:10px 2px;}
+  /* 贴士 */
+  .tip{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:13px;line-height:1.7;}
+  .tip .t-head{font-weight:700;margin-bottom:3px;}
+  footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center;}
+  /* toast */
+  #toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:rgba(0,0,0,.82);color:#fff;font-size:13px;padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:999;max-width:86vw;text-align:center;}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .flight{background:var(--card);border:1px solid var(--red);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
+  .fl-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
+  .fl-label{font-size:13.5px;font-weight:700;color:var(--red);}
+  .fl-meta{font-size:11.5px;color:var(--muted);}
+  .fl-leg{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
+  .fl-time{font-weight:800;min-width:56px;font-variant-numeric:tabular-nums;}
+  .fl-ap{font-weight:600;}
+  .fl-bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:11.5px;color:var(--muted);}
+  .fl-bar .ln{flex:1;height:1px;background:#e8e8e8;}
+  .fl-stop{margin:6px 0 6px 68px;font-size:11.5px;color:var(--muted);background:#f5f5f5;border-radius:8px;padding:5px 10px;}
+  .fl-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
+  .seg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;}
+  .seg-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;}
+  .seg-label{font-size:13.5px;font-weight:700;}
+  .seg-meta{font-size:11.5px;color:var(--muted);}
+  .seg-row{display:flex;align-items:baseline;gap:12px;font-size:13.5px;}
+  .seg-time{font-weight:800;min-width:56px;color:var(--red);}
+  .seg-note{margin-top:9px;padding-top:9px;border-top:1px dashed #eee;font-size:12px;color:#777;line-height:1.65;}
+  .hotel{background:var(--card);border:1px solid #5b8def;border-radius:12px;padding:12px 14px;margin:8px 0;}
+  /* 心愿list 表格 */
+  .wl-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .wl-table th{background:#faf7f6;color:var(--red);font-weight:700;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);font-size:12.5px;}
+  .wl-table td{padding:9px 12px;border-bottom:1px solid var(--line);color:#555;vertical-align:top;}
+  .wl-table tr:last-child td{border-bottom:none;}
+  .wl-table td[contenteditable]{cursor:text;min-width:60px;}
+  .wl-table td[contenteditable]:focus{background:#fff8f0;outline:2px solid rgba(255,36,66,.3);border-radius:4px;}
+  .wl-table .wl-placeholder{color:#ccc;font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="tag">大阪 · 京都 · 神户</span>
+    <h1>关西旅行攻略</h1>
+    <div class="sub">2026.10.2（周五）— 10.6（周二）· 共 5 天 · 由微信群机器人自动维护</div>
+  </header>
+
+  <nav class="toc">
+    <a href="#overview">总览</a>
+    <a href="#daily">每日行程</a>
+    <a href="#food">美食清单</a>
+    <a href="#shopping">购物清单</a>
+    <a href="#wishlist">心愿list</a>
+    <a href="#tips">实用贴士</a>
+  </nav>
+
+  <!-- ═══ 总览 ═══ -->
+  <div class="sec-title" id="overview"><span class="bar"></span>总览</div>
+  <div class="city-grid">
+    <div class="city-card"><div class="cname">大阪</div><div class="cdays">Day1 · Day3 · Day4 上午</div><div class="cn">5 家</div></div>
+    <div class="city-card"><div class="cname">京都</div><div class="cdays">Day2（全天）</div><div class="cn">1 家</div></div>
+    <div class="city-card"><div class="cname">神户</div><div class="cdays">Day4 下午 + Day5 上午</div><div class="cn">2 家</div></div>
+  </div>
+  <div class="summary">共 <b>10</b> 家 · 美食 <b>5</b> 家 · 购物 <b>5</b> 家</div>
+
+  <!-- ═══ 每日行程 ═══ -->
+  <div class="sec-title" id="daily"><span class="bar"></span>每日行程 <small>机票已录入 · Day1 大阪 / Day2 京都 / Day3 大阪 / Day4 大阪→神户 / Day5 神户→UKB</small></div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 1</span><span class="day-date">10/2 周五</span><span class="day-city">大阪</span></div>
+    <div class="flight">
+      <div class="fl-head"><span class="fl-label">✈️ 去程 · 澳门航空 NX856</span><span class="fl-meta">经济舱 · 中型机 320 · 有餐食 · 准点率 96.67%</span></div>
+      <div class="fl-leg"><span class="fl-time">08:20</span><span class="fl-ap">MFM 澳门国际机场</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 3h35m</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">12:55</span><span class="fl-ap">KIX 关西国际机场 T1</span></div>
+      <div class="fl-note">📌 落地后入境 + 取行李约 1 小时，HARUKA/南海电铁至大阪约 50–70 分钟 → 预计 <b>14:30–15:00</b> 抵达大阪。先去酒店放行李，下午逛道顿堀/难波。</div>
+    </div>
+    <div class="hotel">
+      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 入住 · Sugata Hotel Osaka Shinsaibashi</span>
+        <span style="font-size:11.5px;color:var(--muted);">Series by Marriott · 日本首店 · Marriott Bonvoy 积分可用</span>
+      </div>
+      <div style="font-size:13px;line-height:1.7;">📍 大阪市中央区南新地2-6-25 · 地下鉄「長堀橋」駅 步行约 400m ／「心斎橋」駅 步行约 600m</div>
+      <div style="font-size:12px;color:#777;margin-top:6px;line-height:1.65;">📌 2026 年新开业（256 间），步行可达道顿堀/难波/なんばウォーク。入住 10/2 → 退房 10/5（3 晚）。</div>
+    </div>
+    <div class="day-empty">其余待排 —— 到下方「美食清单」点 ＋加入行程 添加</div>
+  </div>
+    <div class="day">
+    <div class="day-head"><span class="day-num">Day 2</span><span class="day-date">10/3 周六</span><span class="day-city">京都</span></div>
+    <div class="hotel">
+      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 回大阪住 · Sugata Hotel（第 2 晚）</span>
+        <span style="font-size:11.5px;color:var(--muted);">退房 10/5</span>
+      </div>
+      <div style="font-size:12px;color:#777;line-height:1.65;">全天京都（阪急梅田⇄京都河原町 约 45 分），傍晚返回大阪酒店。</div>
+    </div>
+    <div class="day-empty">待排</div>
+  </div>
+    <div class="day">
+    <div class="day-head"><span class="day-num">Day 3</span><span class="day-date">10/4 周日</span><span class="day-city">大阪</span></div>
+    <div class="hotel">
+      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 住 Sugata Hotel（第 3 晚）</span>
+        <span style="font-size:11.5px;color:var(--muted);">10/4 夜 · 明天上午退房</span>
+      </div>
+      <div style="font-size:12px;color:#777;line-height:1.65;">全天大阪。明早退房后行李寄存或拖去京都。</div>
+    </div>
+    <div class="day-empty">待排</div>
+  </div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 4</span><span class="day-date">10/5 周一</span><span class="day-city">大阪 → 神户</span></div>
+    <div class="seg">
+      <div class="seg-head"><span class="seg-label">🚄 中午 大阪 → 神户</span><span class="seg-meta">梅田 → 三宫 约 30 分钟（阪急 / 阪神 / JR）</span></div>
+      <div class="seg-row"><span class="seg-time">上午</span><span>大阪 —— 退房后逛最后半天</span></div>
+      <div class="seg-row"><span class="seg-time">下午</span><span>神户 —— 有整整一个下午</span></div>
+      <div class="seg-note">📌 退房后行李可寄存或带去神户酒店。当晚住神户，Day5 去机场更顺：三宫 → 神户机场 UKB · Port Liner 约 18 分钟。</div>
+    </div>
+    <div class="hotel">
+      <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span style="font-size:13.5px;font-weight:700;color:#5b8def;">🏨 入住 · Hotel Monte Hermana Kobe Amalie</span>
+        <span style="font-size:11.5px;color:var(--muted);">三宮駅地下鉄出口步行 3 分 · 生田神社隣</span>
+      </div>
+      <div style="font-size:13px;line-height:1.7;">📍 兵庫県神戸市中央区中山手通2-2-28 · 地下鉄「三宮」駅 西1番出口 步行约 3 分 ／ JR「三ノ宮」駅 西出口 步行约 7 分</div>
+      <div style="font-size:12px;color:#777;margin-top:6px;line-height:1.65;">📌 TEL 078-393-7111 · 180 间 · DHC アメニティ。入住 10/5 → 退房 10/6（1 晚）。退房后 Port Liner 至 UKB 约 18 分钟。</div>
+    </div>
+    <div class="day-empty">神户店铺待记录 —— 到下方清单点 ＋加入行程 添加</div>
+  </div>
+  <div class="day">
+    <div class="day-head"><span class="day-num">Day 5</span><span class="day-date">10/6 周二</span><span class="day-city">神户 · UKB 返程</span></div>
+    <div class="flight">
+      <div class="fl-head"><span class="fl-label">✈️ 返程 · 星宇航空 JX835 / JX205</span><span class="fl-meta">经济舱 · 有餐食 · 行李直达 · 无需过境签</span></div>
+      <div class="fl-leg"><span class="fl-time">11:40</span><span class="fl-ap">UKB 神户机场 T2</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 3h</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">13:40</span><span class="fl-ap">TPE 桃园机场 T1（台北）</span></div>
+      <div class="fl-stop">🔄 中转中国台北 · 停留 4h5m · 行李直达 · 无需过境签</div>
+      <div class="fl-leg"><span class="fl-time">17:45</span><span class="fl-ap">TPE 桃园机场 T1</span></div>
+      <div class="fl-bar"><span class="ln"></span><span>飞行 1h55m</span><span class="ln"></span></div>
+      <div class="fl-leg"><span class="fl-time">19:40</span><span class="fl-ap">MFM 澳门国际机场</span></div>
+      <div class="fl-note">📌 神户机场 T2 国际线建议提前 2 小时到 → <b>09:40 前</b>抵达 UKB（三宫 → 神户机场 Port Liner 约 18 分钟）。<b>当天上午基本只能赶飞机，神户景点建议挪到 Day2–4。</b></div>
+    </div>
+    <div class="day-empty">其余待排 —— 神户景点建议改到回程前的白天</div>
+  </div>
+
+  <!-- ═══ 美食清单 ═══ -->
+  <div class="sec-title" id="spots"><span class="bar"></span>景点清单 <small>仅备选 · 不排入行程</small></div>
+  <div class="tip" style="margin-bottom:14px">下面这些是<b>只存清单、不进每日行程</b>的备选景点（来自你发的两张图）。⚠️ 标注「待核实 / 未证实」的是我没能从源头核实的信息，别当准数据用。</div>
+
+  <div class="city"><span class="bar"></span>大阪 <span class="count">19 处</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🏛</div>
+      <div class="shop-info">
+        <div class="shop-name">慶沢園｜池泉回游式庭园</div>
+        <div class="tags"><span>景点</span><span>庭园</span><span>天王寺</span><span>小众</span></div>
+        <div class="meta">
+          <div>📍 <b>天王寺公園内</b> · 大阪市天王寺区茶臼山町1-108（JR/御堂筋線/谷町線「天王寺」駅 步行5分）</div>
+          <div>🕐 9:30 – 17:00 · 休周一（逢节假日顺延）、12/29–1/1</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>大正时代住友家本邸旧址，造园家小川治兵衛设计的纯日式池泉回游式庭园。池心浮岛、三方假山，环绕园路+石桥+茶室凉亭，人少安静</div>
+    <div class="note">⚠️ 图上写作「跪式宫」，查无此地名 —— 按图描述（皇家园林/池为中心回游式/安静人少）判定为<b>慶沢園</b>，请确认。大人 ¥300，与大阪市立美術館共通券 ¥600。TEL 06-7494-3583</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「慶沢園｜池泉回游式庭园」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🎡</div>
+      <div class="shop-info">
+        <div class="shop-name">HEP FIVE｜红色摩天轮</div>
+        <div class="tags"><span>景点</span><span>梅田</span><span>摩天轮</span><span>扭蛋</span></div>
+        <div class="meta">
+          <div>📍 大阪市北区角田町5-15 · 阪急大阪梅田駅 步行约 3 分</div>
+          <div>🕐 馆内 11:00 – 21:00（餐饮到 22:30，各店不同）· 摩天轮营业至夜间</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>梅田地标：屋顶红色摩天轮；馆内扭蛋机天堂、大头贴机、年轻潮流品牌</div>
+    <div class="note">⚠️ 图上归在「六甲山周边」，实际在<b>大阪梅田</b>（离六甲山约 30km），已按实际位置归入大阪。摩天轮确切营业时间与票价<b>待核实</b></div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「HEP FIVE｜红色摩天轮」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🧸</div>
+      <div class="shop-info">
+        <div class="shop-name">阪急三番街｜角色周边</div>
+        <div class="tags"><span>景点</span><span>梅田</span><span>角色周边</span><span>免税</span></div>
+        <div class="meta">
+          <div>📍 大阪市北区芝田1-1-3 · 阪急大阪梅田駅直结（<b>北館 B1F トイスクエア</b>）</div>
+          <div>🕐 10:00 – 23:00（各店不同；有休馆日，如 9/17、11/19）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>キディランド 大阪梅田店（内含 <b>KIRBY'S PUPUPU MARKET</b> 大阪梅田店，星之卡比周边，10:00–21:00）、どんぐり共和国（吉卜力）、スヌーピータウンショップ、Sanrio 等</div>
+    <div class="note">星のカービィ × 阪急電車 联名活动常年更替，出发前查当期内容。キディランド 北館B1F 标 TAX FREE</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「阪急三番街｜角色周边」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🛍</div>
+      <div class="shop-info">
+        <div class="shop-name">茶屋町｜周边 & 杂货</div>
+        <div class="tags"><span>景点</span><span>梅田</span><span>手办</span><span>杂货</span></div>
+        <div class="meta">
+          <div>📍 大阪市北区茶屋町 · 阪急大阪梅田駅 茶屋町口 步行约 2 分</div>
+          <div>🕐 各店不同（NU茶屋町 约 11:00 – 21:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>NU茶屋町、チャスカ茶屋町、梅田ロフト 等；图上称有动漫周边、手办、谷子、异国调味食品</div>
+    <div class="note">⚠️ 图上写作「恩优茶屋丁」「连接阪崎香山街」，均按<b>茶屋町</b>记录（后者疑为阪急かっぱ横丁，未核实）。图上「十月可领 2000 円优惠券（复制页面+护照）」<b>查无任何依据，标为未证实</b></div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「茶屋町｜周边 & 杂货」加入 Day5（10/6 神户）">Day5 · 10/6 神户</b
+
+... [OUTPUT TRUNCATED - 3,784 chars omitted out of 53,712 total] ...
+
+me">勝尾寺｜勝運の寺・达摩</div>
+        <div class="tags"><span>景点</span><span>箕面</span><span>达摩</span><span>胜运</span></div>
+        <div class="meta">
+          <div>📍 <b>大阪府箕面市粟生間谷2914-1</b>（明治の森箕面国定公園内）· 北大阪急行「箕面萱野」駅 → 阪急バス直行约 20 分 · 大阪モノレール「彩都西」駅 打车约 12 分</div>
+          <div>🕐 平日・日曜・祝日 8:00 – 17:00（最终受理 16:30）；<b>周六 8:00 – 18:00</b>（最终 17:30）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>1300 年古刹、西国三十三所第 23 番札所，本尊十一面千手観世音菩薩（本堂由丰臣秀赖再建）。招牌画面是<b>境内满地「勝ちダルマ」</b>——石垣、灯籠上、树根边到处都摆着一颗颗小达摩；还有達磨みくじ、弁天池、二階堂、多宝塔。以「<b>勝運</b>」闻名，参拜求考试／求职／比赛／商卖</div>
+    <div class="note">入山志納料：<b>大人（高中生以上）¥500 / 小・中学生 ¥400 / 未就学児 ¥100 / 2 歳以下免费</b>；官方另有「Web 入山券」，可省去现场排队。交通：御堂筋線 梅田→千里中央 → 北大阪急行 千里中央→箕面萱野 → 阪急バス直行约 20 分，<b>合计单程约 1 小时（估算，含转乘）</b>；打车从箕面萱野駅约 15 分。⚠️ 巴士 9:00–15:00 每 10 分钟一班 + 临时增班；11 月红叶季极挤、周末会滞留排长队（10 月初相对好）。府道4号<b>摩托车全天禁行</b>。就近可顺带箕面大滝、吃枫叶天妇罗。TEL 072-721-7010</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「勝尾寺｜勝運の寺・达摩」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🏯</div>
+      <div class="shop-info">
+        <div class="shop-name">大阪城公园｜护城河・天守阁外观</div>
+        <div class="tags"><span>景点</span><span>大阪城</span><span>公园</span><span>历史</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区大阪城1-1 · <b>谷町線「谷町四丁目」駅 1-B 出口</b> 步行约 15 分（东梅田出发坐谷町线 3 站）</div>
+          <div>🕐 公园 24 小时开放（天守阁 9:00–17:00，有料）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>护城河、石墙、天守阁外观一起看；公园免费，天守阁需购票。秋季红叶/春季樱花绝景</div>
+    <div class="note">📌 从东梅田站坐谷町线往八尾南方向 3 站到谷町四丁目。建议外观拍照为主，内部登楼看预算。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「大阪城公园｜护城河・天守阁外观」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「大阪城公园｜护城河・天守阁外观」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「大阪城公园｜护城河・天守阁外观」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「大阪城公园｜护城河・天守阁外观」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「大阪城公园｜护城河・天守阁外观」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">⛩</div>
+      <div class="shop-info">
+        <div class="shop-name">四天王寺｜金堂・五重塔・回廊</div>
+        <div class="tags"><span>景点</span><span>寺庙</span><span>日本最早官寺</span></div>
+        <div class="meta">
+          <div>📍 大阪市天王寺区四天王寺1-11-6 · <b>谷町線「四天王寺前夕阳丘」駅</b> 步行约 5 分</div>
+          <div>🕐 寺域自由参拜 8:30–16:30（金堂/五重塔等有料）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>圣德太子创建的<b>日本最早官寺</b>（593年）；金堂、五重塔、回廊；每周日在境内有缘日集市</div>
+    <div class="note">📌 从谷町四丁目坐谷町线 3 站。石鸟居一侧出来步行约 20 分钟到新世界。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「四天王寺｜金堂・五重塔・回廊」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「四天王寺｜金堂・五重塔・回廊」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「四天王寺｜金堂・五重塔・回廊」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「四天王寺｜金堂・五重塔・回廊」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「四天王寺｜金堂・五重塔・回廊」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🗼</div>
+      <div class="shop-info">
+        <div class="shop-name">新世界／通天阁</div>
+        <div class="tags"><span>景点</span><span>通天阁</span><span>老街</span><span>串炸</span></div>
+        <div class="meta">
+          <div>📍 大阪市浪速区惠美须东2-1-10 · <b>堺筋線「恵美須町」駅</b> 步行约 1 分</div>
+          <div>≒ 通天阁 9:00–21:00（L.O. 20:30）· 老街各店不同</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>拍通天阁和老街同框、逛大招牌、吃<b>串炸（だるま等）</b>和<b>章鱼烧</b>；昭和风情老街</div>
+    <div class="note">📌 从四天王寺石鸟居步行约 20 分钟。适合中午在这里吃饭歇脚。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「新世界／通天阁」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「新世界／通天阁」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「新世界／通天阁」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「新世界／通天阁」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「新世界／通天阁」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🍣</div>
+      <div class="shop-info">
+        <div class="shop-name">黑门市场｜海鲜・水果・小吃</div>
+        <div class="tags"><span>景点</span><span>市场</span><span>美食</span><span>难波</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区日本桥2-4-1 · <b>堺筋線「日本橋」駅 10 号出口</b> 步行约 2 分</div>
+          <div>≒ 各店不同（多为 9:00–18:00）· 部分店周日休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>「大阪的厨房」——有棚顶的市场街；现吃<b>海鲜丼、河豚、烤串、玉子烧</b>；水果摊可试吃</div>
+    <div class="note">📌 从恵美須町坐堺筋线 1 站到日本桥。人多时注意随身物品。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「黑门市场｜海鲜・水果・小吃」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「黑门市场｜海鲜・水果・小吃」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「黑门市场｜海鲜・水果・小吃」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「黑门市场｜海鲜・水果・小吃」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「黑门市场｜海鲜・水果・小吃」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🦁</div>
+      <div class="shop-info">
+        <div class="shop-name">难波八阪神社｜巨型狮子头</div>
+        <div class="tags"><span>景点</span><span>神社</span><span>难波</span><span>打卡</span></div>
+        <div class="meta">
+          <div>📍 大阪市浪速区难波中2-9-21 · <b>南海本線「難波」駅</b> 步行约 5 分</div>
+          <div>🕐 境内 24 小时自由参拜</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>高达 12m 的<b>巨型狮子头（獅子殿）</b>，张嘴造型极具冲击力，是难波地标打卡点；境内还有「学业成就」石碑</div>
+    <div class="note">📌 黑门市场步行可达。人少清净，适合快速打卡拍照。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「难波八阪神社｜巨型狮子头」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「难波八阪神社｜巨型狮子头」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「难波八阪神社｜巨型狮子头」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「难波八阪神社｜巨型狮子头」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「难波八阪神社｜巨型狮子头」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🍊</div>
+      <div class="shop-info">
+        <div class="shop-name">橘子街（Orange Street）｜家居・选物</div>
+        <div class="tags"><span>景点</span><span>商店街</span><span>心斋桥</span><span>选物</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区西心斋桥 1-chome（<b>心斋桥筋商店街西侧</b>）</div>
+          <div>≒ 各店不同（多约 11:00–20:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>大阪的<b>家居/生活方式选物街</b>——家具店、杂货店、咖啡馆、买手店林立；比心斋桥筋安静，适合慢慢逛</div>
+    <div class="note">📌 难波八阪神社步行可达，连接美国村。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「橘子街（Orange Street）｜家居・选物」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「橘子街（Orange Street）｜家居・选物」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「橘子街（Orange Street）｜家居・选物」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「橘子街（Orange Street）｜家居・选物」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「橘子街（Orange Street）｜家居・选物」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🇺🇸</div>
+      <div class="shop-info">
+        <div class="shop-name">美国村（Amerikamura）｜古着・潮流</div>
+        <div class="tags"><span>景点</span><span>古着</span><span>潮流</span><span>心斋桥</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区西心斋桥 1-chome · <b>心斋桥筋商店街西侧</b>，与橘子街相连</div>
+          <div>≒ 各店不同（古着店多约 11:00–20:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>大阪最大<b>古着/潮流聚集地</b>；三角公园周边有街头艺人；古着店 300 円起，名牌中古也有</div>
+    <div class="note">📌 橘子街步行可达，连接心斋桥筋商店街。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「美国村（Amerikamura）｜古着・潮流」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「美国村（Amerikamura）｜古着・潮流」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「美国村（Amerikamura）｜古着・潮流」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「美国村（Amerikamura）｜古着・潮流」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「美国村（Amerikamura）｜古着・潮流」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🛍</div>
+      <div class="shop-info">
+        <div class="shop-name">心斋桥筋商店街</div>
+        <div class="tags"><span>景点</span><span>商店街</span><span>购物</span><span>心斋桥</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区心斋桥筋（<b>长堀桥～难波</b>，全长约 600m）· 心斋桥駅 直结</div>
+          <div>≒ 各店不同（药妆/服饰多约 10:00–21:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>大阪最著名的<b>拱顶商店街</b>——药妆、服饰、餐饮一条龙；沿街有大丸心斋橋店、Air BicCamera 等</div>
+    <div class="note">📌 美国村步行可达，连接法善寺横丁/道顿堀。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「心斋桥筋商店街」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「心斋桥筋商店街」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「心斋桥筋商店街」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「心斋桥筋商店街」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「心斋桥筋商店街」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🏮</div>
+      <div class="shop-info">
+        <div class="shop-name">法善寺横丁｜石畳小巷</div>
+        <div class="tags"><span>景点</span><span>小巷</span><span>餐厅</span><span>道顿堀</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区东心斋桥 1-2 · <b>心斋桥筋商店街南端</b> 步行约 1 分</div>
+          <div>≒ 小巷 24 小时可走（各餐厅营业时间不同）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>石畳铺地的<b>昭和风情小巷</b>；<b>法善寺（不动明王）</b>的水挂不动尊——泼水许愿；巷内有料亭、居酒屋、鳗鱼饭</div>
+    <div class="note">📌 心斋桥筋商店街南端拐入，出来就是道顿堀。傍晚时分氛围最好。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「法善寺横丁｜石畳小巷」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「法善寺横丁｜石畳小巷」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「法善寺横丁｜石畳小巷」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「法善寺横丁｜石畳小巷」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「法善寺横丁｜石畳小巷」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🍜</div>
+      <div class="shop-info">
+        <div class="shop-name">道顿堀｜格力高看板・河岸夜景</div>
+        <div class="tags"><span>景点</span><span>道顿堀</span><span>美食</span><span>夜景</span></div>
+        <div class="meta">
+          <div>📍 大阪市中央区道顿堀（<b>戎桥～日本桥</b>）· 各线「難波」駅 步行约 3 分</div>
+          <div>≒ 运河步道 24 小时开放（各餐厅营业时间不同）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div><b>格力高跑步人看板</b>、戎桥、河岸霓虹灯光；章鱼烧、拉面、回转寿司一条街；夜晚灯光最出片</div>
+    <div class="note">📌 法善寺横丁出来就是。晚上在这里吃饭收尾，看格力高看板和河岸灯光✨。已记录的蟹道乐/豚めし家都在这附近。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「道顿堀｜格力高看板・河岸夜景」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「道顿堀｜格力高看板・河岸夜景」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「道顿堀｜格力高看板・河岸夜景」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「道顿堀｜格力高看板・河岸夜景」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「道顿堀｜格力高看板・河岸夜景」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🌃</div>
+      <div class="shop-info">
+        <div class="shop-name">梅田蓝天大厦｜空中庭园展望台</div>
+        <div class="tags"><span>景点</span><span>梅田</span><span>夜景</span><span>展望台</span></div>
+        <div class="meta">
+          <div>📍 大阪市北区大淀中1-1-88 · <b>御堂筋線「梅田」駅</b> 步行约 10 分（难波出发坐 4 站）</div>
+          <div>≒ 展望台 9:30–22:30（L.O. 22:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>360° 空中庭园展望台（门票约 ¥1,500）；<b>大阪夜景收尾首选</b>；两栋楼之间的圆形连接廊是标志性打卡位</div>
+    <div class="note">📌 道顿堀坐御堂筋线 4 站到梅田。建议日落前上去，一次看日景+夜景。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「梅田蓝天大厦｜空中庭园展望台」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「梅田蓝天大厦｜空中庭园展望台」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「梅田蓝天大厦｜空中庭园展望台」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「梅田蓝天大厦｜空中庭园展望台」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「梅田蓝天大厦｜空中庭园展望台」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="city"><span class="bar"></span>京都 <span class="count">4 处</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🎋</div>
+      <div class="shop-info">
+        <div class="shop-name">嵐山｜渡月橋・天龍寺・竹林小径</div>
+        <div class="tags"><span>景点</span><span>嵐山</span><span>庭园</span><span>竹林</span></div>
+        <div class="meta">
+          <div>📍 京都市右京区嵯峨 · <b>阪急嵐山線「嵐山」駅</b> 步行约 5 分到渡月橋</div>
+          <div>🕐 竹林小径全天开放；天龍寺 约 8:30 – 17:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>渡月橋、天龍寺庭园、竹林小径、百年老铺与传统茶屋；图上推荐<b>豆腐味冰淇淋</b></div>
+    <div class="note">图上写作「阪急蓝山县」，即<b>阪急嵐山線</b>。天龍寺开放时间与门票<b>待核实</b></div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「嵐山｜渡月橋・天龍寺・竹林小径」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🚂</div>
+      <div class="shop-info">
+        <div class="shop-name">嵯峨野トロッコ列車｜小火车</div>
+        <div class="tags"><span>景点</span><span>嵐山</span><span>小火车</span><span>需预约</span></div>
+        <div class="meta">
+          <div>📍 <b>トロッコ嵯峨駅 → トロッコ亀岡駅</b>（JR 嵯峨嵐山駅 旁）</div>
+          <div>🕐 运行日约 3 月 – 12/29；冬季运休 12/30 – 2 月末。<b>10 月有「光の幻想列車」夜间班次</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>沿保津川峡谷跑 7.3km / 约 25 分；<b>5 号車「ザ・リッチ」开放式无窗车厢</b>视野最好，看峡谷最爽</div>
+    <div class="note">图上写作「作业室 → 作业游览小火车」，即トロッコ列車。5 号车为指定席、<b>需提前预约</b>（官网 / e5489 / JR みどりの窓口）；票价<b>待核实</b>。官网 sagano-kanko.co.jp</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「嵯峨野トロッコ列車｜小火车」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">⛩</div>
+      <div class="shop-info">
+        <div class="shop-name">祇園｜八坂神社・八坂庚申堂・花見小路</div>
+        <div class="tags"><span>景点</span><span>祇園</span><span>神社</span><span>老街</span></div>
+        <div class="meta">
+          <div>📍 京都市東山区祇園町 · 阪急京都線「京都河原町」駅 步行约 8 分</div>
+          <div>🕐 八坂神社 24 小时自由参拜；八坂庚申堂 约 9:00 – 17:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>八坂神社（祇园祭本社）、<b>八坂庚申堂</b>（くくり猿 · 挂满彩色布猴的网红机位）、祇園<b>花見小路</b>（传统町屋老街）</div>
+    <div class="note">图上写作「京都河源天池」「奇缘花界小路」「八揽神社」「八版庚申堂」，均按 祇園 / 花見小路 / 八坂神社 / 八坂庚申堂 记录。八坂庚申堂开放时间<b>待核实</b></div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「祇園｜八坂神社・八坂庚申堂・花見小路」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🌇</div>
+      <div class="shop-info">
+        <div class="shop-name">K36 The Bar &amp; Rooftop｜日落露台酒吧</div>
+        <div class="tags"><span>景点</span><span>東山</span><span>露台酒吧</span><span>看日落</span></div>
+        <div class="meta">
+          <div>📍 <b>ザ・ホテル青龍 京都清水 4F</b> · 京都市東山区清水2-204-2</div>
+          <div>🕐 15:00 – 24:00（L.O. 23:30）· 不定休 · TEL 075-541-3636</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>360° 全景露台，傍晚到夜里看晚霞，<b>远眺清水寺、八坂の塔、京都タワー</b>；由原清水小学校改建的酒店顶楼</div>
+    <div class="note">图上写作「隐藏宝藏：京都最美日落露台酒吧，傍晚到夜晚360度看晚霞，远眺清水寺」——已核实为此处。⚠️ 13 歳以下不可入内；13–19 歳需 20 歳以上同伴</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「K36 The Bar & Rooftop｜日落露台酒吧」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="city"><span class="bar"></span>神户 <span class="count">3 处</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">⚓</div>
+      <div class="shop-info">
+        <div class="shop-name">メリケンパーク｜神户港 waterfront・BE KOBE</div>
+        <div class="tags"><span>景点</span><span>神户港</span><span>夜景</span><span>免费</span></div>
+        <div class="meta">
+          <div>📍 神戸市中央区波止場町2 · <b>JR・阪神「元町」駅 步行约 10 分</b> ／ 地下鉄海岸線「みなと元町」駅 步行约 8 分</div>
+          <div>🕐 公园 24 小时开放（ポートタワー 9:00–23:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div><b>神戸ポートタワー</b>（展望台+屋顶平台 ¥1,200，360° 眺望）、<b>BE KOBE 纪念碑</b>（夜间灯光打卡）、神戸港震災メモリアルパーク、神戸海洋博物館（白帆船造型）、芝生广场散步、西日本最大级星巴克</div>
+    <div class="note">📌 免费公园，适合傍晚看日落+夜景。ポートタワー旋转咖啡厅转一圈约 20 分钟。与六甲ミーツ・アート同在神户，可安排同一天。</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「メリケンパーク｜神户港 waterfront・BE KOBE」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「メリケンパーク｜神户港 waterfront・BE KOBE」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「メリケンパーク｜神户港 waterfront・BE KOBE」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「メリケンパーク｜神户港 waterfront・BE KOBE」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「メリケンパーク｜神户港 waterfront・BE KOBE」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🚡</div>
+      <div class="shop-info">
+        <div class="shop-name">摩耶山｜ロープウェイ＆ケーブル・星のまどか</div>
+        <div class="tags"><span>景点</span><span>摩耶山</span><span>夜景</span><span>缆车</span></div>
+        <div class="meta">
+          <div>📍 摩耶ケーブル駅：神戸市灘区摩耶山町2-2 · <b>阪急「六甲」駅 → 摩耶ケーブル駅（巴士约 10 分）</b></div>
+          <div>🕐 春秋冬月水木 10:00–17:30 ／ 春秋金土日祝・夏季 10:00–20:50（最终便：ケーブル 20:20・ロープウェー 20:30）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>摩耶ケーブル＋摩耶ロープウェー接驳上山 → <b>星のまどか（掬星台）</b>展望台看<b>日本三大夜景</b>；山上气温比市区低 5–6℃；秋季红叶绝景</div>
+    <div class="note">📌 ケーブル片道 ¥450（往复 ¥780）＋ ロープウェー＋展望台 套票约 ¥2,100（以官网为准）。建议下午上山看日落→夜景。注意末班车时间，别错过！</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「摩耶山｜ロープウェイ＆ケーブル・星のまどか」加入 Day1（10/2 大阪）">Day1 · 10/2 大阪</button><button data-hermes-send="把「摩耶山｜ロープウェイ＆ケーブル・星のまどか」加入 Day2（10/3 京都）">Day2 · 10/3 京都</button><button data-hermes-send="把「摩耶山｜ロープウェイ＆ケーブル・星のまどか」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「摩耶山｜ロープウェイ＆ケーブル・星のまどか」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「摩耶山｜ロープウェイ＆ケーブル・星のまどか」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🎨</div>
+      <div class="shop-info">
+        <div class="shop-name">六甲ミーツ・アート 2026 beyond｜六甲山艺术节</div>
+        <div class="tags"><span>景点</span><span>六甲山</span><span>艺术节</span><span>奈良美智</span></div>
+        <div class="meta">
+          <div>📍 神户·六甲山上多处：ROKKO森の音ミュージアム、六甲高山植物園、新池、六甲ケーブル（山下駅/山上駅）、天覧台、六甲ガーデンテラス、自然体感展望台 六甲枝垂れ、風の教会 等</div>
+          <div>🕐 <b>2026/8/29（六）– 11/29（日）· 共 93 天 · 会期中无休</b>（六甲山サイレンスリゾート 每周一休）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">⭐ 看点</div>第 17 届现代艺术祭，整座山变成户外展场；<b>奈良美智《Peace Head》</b>（已转为常设）+ <b>草間彌生《南瓜》</b>（特别寄託）等约 50 组作品</div>
+    <div class="note">主催：六甲山観光 · 阪神電気鉄道。交通：阪急六甲駅 → 六甲ケーブル下駅 → 缆车约 10 分上山（山上标高 730–880m，比市区低 5–6℃）。⚠️ 图上「周末/节假日夜间灯光展」<b>未核实</b>。官网 rokkomeetsart.jp</div>
+    <div class="addbar"><details><summary>＋ 加入行程</summary><div class="day-picker"><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day1（10/2 京都）">Day1 · 10/2 京都</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day2（10/3 大阪）">Day2 · 10/3 大阪</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day3（10/4 大阪）">Day3 · 10/4 大阪</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day4（10/5 大阪→神户）">Day4 · 10/5 大阪→神户</button><button data-hermes-send="把「六甲ミーツ・アート 2026 beyond｜六甲山艺术节」加入 Day5（10/6 神户）">Day5 · 10/6 神户</button></div></details><span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span></div>
+  </div>
+
+  <div class="sec-title" id="food"><span class="bar"></span>美食清单 <small>5 家</small></div>
+
+  <div class="city"><span class="bar"></span>大阪 <span class="count">2 家</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://fanfan.com.tw/wp-content/uploads/2024/07/00-1-2-lhuvw.jpg" alt="蟹道乐 道顿堀本店">
+      <div class="shop-info">
+        <div class="shop-name">蟹道乐 道顿堀本店</div>
+        <div class="tags"><span>美食</span><span>螃蟹专门店</span></div>
+        <div class="meta">
+          <div>📍 <b>道顿堀 1-6-18</b>（道顿堀运河沿岸，巨型活动蟹招牌处）</div>
+          <div>🕐 11:00 – 22:00（最晚入座 20:30）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div>蟹会席套餐：蟹刺身 / 白酱油「黄金高汤」蟹火锅 / 烤蟹腿 / 蟹寿司 · ¥5,000–10,000/人</div>
+    <div class="note">📌 官网可预约，旺季常满席建议提前订位。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day4')">Day4 · 10/5 大阪</button>
+          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://tblg.k-img.com/restaurant/images/Rvw/317164/640x640_rect_fa61527e72f3896b9ac7061bca82c8f2.jpg" alt="豚めし家（Butameshiya）なんばパークス前店">
+      <div class="shop-info">
+        <div class="shop-name">豚めし家（Butameshiya）なんばパークス前店</div>
+        <div class="tags"><span>美食</span><span>烤肉盖饭</span><span>难波</span><span>性价比</span></div>
+        <div class="meta">
+          <div>📍 <b>浪速区難波中 1-18-17</b>（NB難波ビル 1F 路面店，なんばパークス 斜对面）</div>
+          <div>🕐 11:00 – 23:00 · 全年无休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div>北海道帯広风炭火豚丼：豚肩ロース丼（並）¥790 / 厚切り豚バラ丼（並）¥830 / 温玉厚切り豚バラ丼 ¥840 · 汁物 ¥50、沙拉套餐 ¥150 · 人均不到 ¥1,000</div>
+    <div class="note">📌 店外触摸屏自助买食券；下单后逐片炭火现烤，出餐稍慢。不可预约、不支持二维码支付（可刷卡/交通系 IC）。南海なんば駅步行约 2 分钟。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('豚めし家（Butameshiya）なんばパークス前店','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('豚めし家（Butameshiya）なんばパークス前店','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('豚めし家（Butameshiya）なんばパークス前店','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('豚めし家（Butameshiya）なんばパークス前店','Day4')">Day4 · 10/5 大阪</button>
+          <button onclick="addToTrip('豚めし家（Butameshiya）なんばパークス前店','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+
+  <div class="city"><span class="bar"></span>京都 <span class="count">1 家</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://pengu777.com/wp-content/uploads/2023/09/%E4%B8%AD%E6%9D%91%E8%97%A4%E5%90%89-%E4%BA%AC%E9%83%BD%E7%AB%99%E5%BA%976.jpg" alt="中村藤吉 京都站店">
+      <div class="shop-info">
+        <div class="shop-name">中村藤吉 京都站店</div>
+        <div class="tags"><span>美食</span><span>抹茶手信</span></div>
+        <div class="meta">
+          <div>📍 <b>京都站·伊势丹百货 3F</b> 餐厅街（邻 JR 西改札口）</div>
+          <div>🕐 11:00 – 22:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div>まるとパフェ 抹茶 ¥1501、京都站店限定「生茶果冻」、宇治茶/抹茶零食伴手礼</div>
+    <div class="note">📌 不可预约，门口机器抽号牌；高峰约等 40 分钟。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('中村藤吉 京都站店','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('中村藤吉 京都站店','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('中村藤吉 京都站店','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('中村藤吉 京都站店','Day4')">Day4 · 10/5 大阪</button>
+          <button onclick="addToTrip('中村藤吉 京都站店','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="city"><span class="bar"></span>神户 <span class="count">2 家</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🥩</div>
+      <div class="shop-info">
+        <div class="shop-name">モーリヤ 三宮店 ｜ 神户牛铁板烧</div>
+        <div class="tags"><span>美食</span><span>铁板烧</span><span>三宮</span><span>神户牛</span></div>
+        <div class="meta">
+          <div>📍 <b>北長狭通1-9-9 第一岸ビル 3F</b>（各线三宮駅 步行约 3 分 · 生田ロード沿い）</div>
+          <div>🕐 11:00 – 22:00（L.O. 21:00）· 午餐 11:00–15:00 · 不定休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 必点</div><b>A5 神户牛铁板烧</b>（サーロイン/フィレ），赤穂盐调味，铁板现烤 · 午餐套餐约 ¥8,000 起更划算 · 晚餐 ¥10,000–20,000</div>
+    <div class="note">📌 明治 18 年（1885）创业约 140 年老铺，神戸肉流通推進協議会指定登録店。34 席含カウンター，<b>可预约</b>。小红书攻略：没预约直接进也常有位，人均约 ¥1,000（RMB）偏贵但好吃。建议提前订位。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('モーリヤ 三宮店 ｜ 神户牛铁板烧','Day1')">Day1 · 10/2 大阪</button>
+          <button onclick="addToTrip('モーリヤ 三宮店 ｜ 神户牛铁板烧','Day2')">Day2 · 10/3 京都</button>
+          <button onclick="addToTrip('モーリヤ 三宮店 ｜ 神户牛铁板烧','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('モーリヤ 三宮店 ｜ 神户牛铁板烧','Day4')">Day4 · 10/5 大阪→神户</button>
+          <button onclick="addToTrip('モーリヤ 三宮店 ｜ 神户牛铁板烧','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🧀</div>
+      <div class="shop-info">
+        <div class="shop-name">cafe &amp; bar anthem（カフェ＆バー アンセム）｜纱布芝士</div>
+        <div class="tags"><span>美食</span><span>咖啡·甜品</span><span>元町</span><span>网红</span></div>
+        <div class="meta">
+          <div>📍 <b>海岸通2-3-7 グランディア海岸通 4F</b>（JR 元町駅 步行约 5 分 / 地下鉄「旧居留地・大丸」駅 步行约 6 分）</div>
+          <div>🕐 平日 11:30–23:00 ／ 周末 11:00–23:00 · 全年无休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 必点</div><b>纱布芝士蛋糕（レアチーズ）¥550–650</b>——纯白纱布包裹的生芝士蛋糕，入口即化，配自制莓果酱 · herb tea ¥650 · cafe latte ¥600</div>
+    <div class="note">📌 2008 年开业的神户老牌网红店，木质复古装修，白天咖啡甜品、夜晚酒吧。80% 客人必点纱布芝士。⚠️ 无电梯，4 楼需爬楼。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('cafe & bar anthem（カフェ＆バー アンセム）｜纱布芝士','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('cafe & bar anthem（カフェ＆バー アンセム）｜纱布芝士','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('cafe & bar anthem（カフェ＆バー アンセム）｜纱布芝士','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('cafe & bar anthem（カフェ＆バー アンセム）｜纱布芝士','Day4')">Day4 · 10/5 大阪→神户</button>
+          <button onclick="addToTrip('cafe & bar anthem（カフェ＆バー アンセム）｜纱布芝士','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <!-- ═══ 购物清单 ═══ -->
+  <div class="sec-title" id="shopping"><span class="bar"></span>购物清单 <small>5 家</small></div>
+
+  <div class="city"><span class="bar"></span>大阪 <span class="count">4 家</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://www.chums.jp/cms/shop/img/osaka_img_001.jpg" alt="CHUMS グランフロント大阪店">
+      <div class="shop-info">
+        <div class="shop-name">CHUMS（チャムス）｜户外服饰</div>
+        <div class="tags"><span>购物</span><span>户外服饰</span><span>梅田·うめきた</span></div>
+        <div class="meta">
+          <div>📍 <b>GRAND FRONT 大阪 南館 5F</b>（大阪市北区大深町4-20）</div>
+          <div>🕐 11:00 – 21:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div>HelloWear 卫衣系列、Boonie Bird 企鹅图案 T恤/卫衣、帽子、包袋、露营装备（帐篷/椅/睡袋）、厨房杂货 · 服饰约 ¥8,000–20,000</div>
+    <div class="note">📌 GRAND FRONT 大阪店为关西 1 号店；大阪站 2 号出口地下通道直连，步行约 3 分钟。是否免税待确认。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('CHUMS（チャムス）｜户外服饰','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('CHUMS（チャムス）｜户外服饰','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('CHUMS（チャムス）｜户外服饰','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('CHUMS（チャムス）｜户外服饰','Day4')">Day4 · 10/5 大阪</button>
+          <button onclick="addToTrip('CHUMS（チャムス）｜户外服饰','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://www.osaka-chikagai.jp/storage/shop/main_image/q7Mn6LCD89LK9PA43wFD1y3Sn1HOINXwGD8ri77F.webp" alt="@cosme STORE / MiSUGI（なんばウォーク店）">
+      <div class="shop-info">
+        <div class="shop-name">@cosme STORE / MiSUGI（なんばウォーク店）</div>
+        <div class="tags"><span>购物</span><span>化妆品</span><span>难波</span><span>免税</span></div>
+        <div class="meta">
+          <div>📍 <b>なんばウォーク 2番街 · 難波1丁目虹のまち3-6</b>（なんば駅步行约 3 分）</div>
+          <div>🕐 10:00 – 21:00 · 休馆随なんばウォーク（奇数月第3个周三）→ 10月不休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div>350+ 品牌 / 5000+ 单品全店可试用：SHISEIDO、クレ・ド・ポーボーテ、コスメデコルテ、KANEBO、&amp;be、CANMAKE、CEZANNE、excel、hince、rom&amp;nd 等 · 数百年～数万日元</div>
+    <div class="note">📌 TAX FREE 免税店（满 ¥5,000 不含税）。@cosme STORE × 大阪美スギ合作店，アットコスメ/美スギ 积分通用。地下街，雨天和最后一天收尾采购方便。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('@cosme STORE / MiSUGI（なんばウォーク店）','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('@cosme STORE / MiSUGI（なんばウォーク店）','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('@cosme STORE / MiSUGI（なんばウォーク店）','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('@cosme STORE / MiSUGI（なんばウォーク店）','Day4')">Day4 · 10/5 大阪</button>
+          <button onclick="addToTrip('@cosme STORE / MiSUGI（なんばウォーク店）','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="https://i0.wp.com/kaiten-heiten-24.com/wp-content/uploads/2024/10/152-70.jpg" alt="Air BicCamera 大丸心斎橋店">
+      <div class="shop-info">
+        <div class="shop-name">Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）</div>
+        <div class="tags"><span>购物</span><span>家电·相机</span><span>心斎橋</span><span>免税</span></div>
+        <div class="meta">
+          <div>📍 <b>大丸心斎橋店 南館 2F</b> · 大阪市中央区心斎橋筋1-7-1（心斎橋駅 6 号出口徒步约 1 分 / 地下道直结）</div>
+          <div>🕐 11:00 – 21:00 · 基本无休（除元日・1/2，以馆休为准）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div><b>拍立得相纸</b>：富士 instax「チェキ」专用フィルム mini / SQUARE / WIDE（10 枚入 参考价 ¥990–1,100；SQUARE 2 包 ¥2,420）· 另有数码相机、美容家电、音响、腕表、游戏、行李箱</div>
+    <div class="note">📌 TAX FREE 免税店（税抜满 ¥5,000）。卖场仅约 160㎡，相纸库存以店内为准，缺货可去 ビックカメラなんば店（千日前2-10-1）。同馆 1F 是ビックカメラリカー（酒类）、3–4F 化妆品 + 免税柜台。支持「ネット取り置き」线上预留、到店取货。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day4')">Day4 · 10/5 大阪→神户</button>
+          <button onclick="addToTrip('Air BicCamera 大丸心斋桥店（大丸心斎橋店 南館 2F）','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="shop-head">
+      <img class="shop-img" src="images/cocoshnik_hankyu_umeda.png" alt="COCOSHNIK 阪急梅田">
+      <div class="shop-info">
+        <div class="shop-name">COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田</div>
+        <div class="tags"><span>购物</span><span>首饰·轻奢</span><span>梅田</span></div>
+        <div class="meta">
+          <div>📍 <b>阪急百貨店うめだ本店 1F アクセサリー</b> · 大阪市北区角田町8-7（阪急大阪梅田駅 步行约 3 分）</div>
+          <div>🕐 10:00 – 20:00（周五・周六 至 21:00）</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div><b>K10 长链可调节项链</b>——看着平平无奇，戴上很显气质；日本制 K10 金饰，设计简约 · 约 ¥30,000–80,000</div>
+    <div class="note">📌 阪急百货 <b>95 折</b>（结账前确认当期活动）。COCOSHNIK 直营インショップ。同层还有 AGETE、AHKAH、SWAROVSKI 可比价。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田','Day1')">Day1 · 10/2 大阪</button>
+          <button onclick="addToTrip('COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田','Day2')">Day2 · 10/3 京都</button>
+          <button onclick="addToTrip('COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田','Day4')">Day4 · 10/5 大阪→神户</button>
+          <button onclick="addToTrip('COCOSHNIK（ココシュニック）｜K10 项链 · 阪急梅田','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="city"><span class="bar"></span>神户 <span class="count">1 家</span></div>
+  <div class="card">
+    <div class="shop-head">
+      <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🛒</div>
+      <div class="shop-info">
+        <div class="shop-name">ドン・キホーテ 三宮店 ｜ 拍立得相纸</div>
+        <div class="tags"><span>购物</span><span>综合折扣店</span><span>三宮</span><span>免税</span></div>
+        <div class="meta">
+          <div>📍 <b>兵庫県神戸市中央区下山手通2-12-3</b>（4 层楼，JR 三ノ宮駅西口 步行约 5 分 / 地下鉄三宮駅 步行约 2 分）</div>
+          <div>🕐 24 小时营业 · 全年无休</div>
+        </div>
+      </div>
+    </div>
+    <div class="buy"><div class="buy-label">🛒 推荐购买</div><b>富士 instax「チェキ」拍立得相纸</b>：mini / SQUARE / WIDE（10 枚入 约 ¥1,000–1,200）· 另有药妆、食品、杂货、旅游手信</div>
+    <div class="note">📌 TAX FREE 免税店。与 Monte Hermana 同在三宮，退房前或去机场前顺路。24 小时营业，晚上回来也能逛。</div>
+    <div class="addbar">
+      <details>
+        <summary>＋ 加入行程</summary>
+        <div class="day-picker">
+          <button onclick="addToTrip('ドン・キホーテ 三宮店 ｜ 拍立得相纸','Day1')">Day1 · 10/2 京都</button>
+          <button onclick="addToTrip('ドン・キホーテ 三宮店 ｜ 拍立得相纸','Day2')">Day2 · 10/3 大阪</button>
+          <button onclick="addToTrip('ドン・キホーテ 三宮店 ｜ 拍立得相纸','Day3')">Day3 · 10/4 大阪</button>
+          <button onclick="addToTrip('ドン・キホーテ 三宮店 ｜ 拍立得相纸','Day4')">Day4 · 10/5 大阪→神户</button>
+          <button onclick="addToTrip('ドン・キホーテ 三宮店 ｜ 拍立得相纸','Day5')">Day5 · 10/6 神户</button>
+        </div>
+      </details>
+      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
+    </div>
+  </div>
+
+  <div class="sec-title" id="wishlist"><span class="bar"></span>心愿list</div>
+  <div style="overflow-x:auto;">
+  <table class="wl-table">
+    <thead>
+      <tr>
+        <th style="width:14%;">图片</th>
+        <th style="width:14%;">品牌</th>
+        <th style="width:22%;">物品名称</th>
+        <th style="width:12%;">国内价格</th>
+        <th style="width:12%;">日本价格</th>
+        <th style="width:26%;">购买地点</th>
+      </tr>
+    </thead>
+    <tbody id="wishlist-body">
+      <tr>
+        <td style="text-align:center;"><img src="images/wishlist_vivaia.png" alt="Vivaia" style="width:64px;height:64px;object-fit:cover;border-radius:8px;"></td>
+        <td contenteditable="true">Vivaia</td>
+        <td contenteditable="true">鞋子（好穿好看款）</td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+      </tr>
+      <tr>
+        <td style="text-align:center;"><img src="images/wishlist_override.png" alt="override" style="width:64px;height:64px;object-fit:cover;border-radius:8px;"></td>
+        <td contenteditable="true">override</td>
+        <td contenteditable="true">帽子（黑色带带款，倪妮同款）</td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true">¥413</td>
+        <td contenteditable="true" class="wl-placeholder">日本制，估计百货/买手店</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;"><img src="images/wishlist_muji_case.png" alt="MUJI 电脑包" style="width:64px;height:64px;object-fit:cover;border-radius:8px;"></td>
+        <td contenteditable="true">MUJI 無印良品</td>
+        <td contenteditable="true">縦型クッションパソコンケース 14型用 グレー（#84444692）</td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true">¥1,290</td>
+        <td contenteditable="true">MUJI 门店</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;"><img src="images/wishlist_muji_gel.png" alt="MUJI 敏感肌凝胶" style="width:64px;height:64px;object-fit:cover;border-radius:8px;"></td>
+        <td contenteditable="true">MUJI 無印良品</td>
+        <td contenteditable="true">敏感肌用オールインワンジェル 150g（#84935404）</td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true">¥1,490</td>
+        <td contenteditable="true">MUJI 门店</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+        <td contenteditable="true" class="wl-placeholder"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+    <button onclick="addWishRow()" style="font-size:12.5px;font-weight:600;color:#fff;background:var(--red);border:none;border-radius:18px;padding:6px 14px;cursor:pointer;font-family:inherit;">＋ 添加一行</button>
+    <span style="font-size:11.5px;color:var(--muted);">点击空格即可直接编辑 · 添加后记得截图保存</span>
+  </div>
+
+  <!-- ═══ 实用贴士 ═══ -->
+  <div class="sec-title" id="tips"><span class="bar"></span>实用贴士</div>
+  <div class="tip"><div class="t-head">🚇 交通</div>关西机场买 ICOCA 卡（地铁/巴士/便利店通用）；京都巴士一日券 ¥700 划算。</div>
+  <div class="tip"><div class="t-head">🛍️ 免税</div>单店同日消费满 ¥5,000（不含税）免 10% 消费税，结账出示护照。</div>
+  <div class="tip"><div class="t-head">💊 药妆</div>松本清/大国/唐吉诃德常有观光客优惠券，比价后再下手。</div>
+  <div class="tip"><div class="t-head">🕐 营业时间</div>百货约 20:00 打烊，药妆/电器到 22–23 点；部分店有定休日，出发前逐条核对。</div>
+  <div class="tip"><div class="t-head">🧳 行李寄存</div>京都站/大阪站等大站有投币寄存柜。</div>
+  <div class="tip"><div class="t-head">📱 网络</div>机场租 Wi-Fi 蛋或买 eSIM。</div>
+
+  <div class="tip"><div class="t-head">🎫 阪急1日乗車券</div>图上建议 Day1 买阪急全線 1 日乗車券（梅田 ↔ 京都河原町／嵐山 一来回就回本）。票价<b>待核实</b>，阪急各駅售票机可买。</div>
+
+  <footer>数据更新于 2026-09-28 · 由微信群机器人自动维护 · 加店/查单请私聊机器人</footer>
+
+</div>
+
+<div id="toast"></div>
+<script>
+  function addToTrip(name, day){
+    var cmd = '排 ' + name + ' ' + day;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(cmd).catch(function(){});
+    }
+    var t = document.getElementById('toast');
+    t.textContent = '已复制「' + cmd + '」，去微信发给机器人即完成排程';
+    t.classList.add('show');
+    clearTimeout(t._t);
+    t._t = setTimeout(function(){ t.classList.remove('show'); }, 3200);
+  }
+  function addWishRow(){
+    var tbody = document.getElementById('wishlist-body');
+    var tr = document.createElement('tr');
+    for(var i=0;i<5;i++){
+      var td = document.createElement('td');
+      td.contentEditable = 'true';
+      td.className = 'wl-placeholder';
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+    tr.cells[0].focus();
+  }
+  // 心愿list: 输入时去掉 placeholder 样式
+  document.addEventListener('input', function(e){
+    if(e.target.closest('#wishlist-body')){
+      e.target.classList.toggle('wl-placeholder', e.target.textContent.trim()==='');
+    }
+  });
+</script>
+</body>
+</html>
