@@ -134,7 +134,7 @@
       <div class="fl-leg"><span class="fl-time">08:20</span><span class="fl-ap">MFM 澳门国际机场</span></div>
       <div class="fl-bar"><span class="ln"></span><span>飞行 3h35m</span><span class="ln"></span></div>
       <div class="fl-leg"><span class="fl-time">12:55</span><span class="fl-ap">KIX 关西国际机场 T1</span></div>
-      <div class="fl-note">📌 落地后跟着「到着 Arrivals」路牌随人流走，入境+取行李约 1 小时。<b>最省钱路线：南海电铁一站到底坐到难波站，¥970（约40元人民币）</b>，出站就是高岛屋百货/101百货商圈，步行可到心斋桥。先去酒店（长堀桥駅 步行约 400m）放行李，下午逛道顿堀/难波。⚠️ 地铁站内拖大行李上下楼较吃力。</div>
+      <div class="fl-note">📌 落地后入境 + 取行李约 1 小时，HARUKA/南海电铁至大阪约 50–70 分钟 → 预计 <b>14:30–15:00</b> 抵达大阪。先去酒店放行李，下午逛道顿堀/难波。</div>
     </div>
     <div class="hotel">
       <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
@@ -862,7 +862,7 @@ me">勝尾寺｜勝運の寺・达摩</div>
     </div>
   </div>
 
-<div class="city"><span class="bar"></span>神户 <span class="count">5 家</span></div>
+<div class="city"><span class="bar"></span>神户 <span class="count">3 家</span></div>
   <div class="card">
     <div class="shop-head">
       <div class="shop-img" style="display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(135deg,#fff1f3,#ffe0e6)">🥩</div>
@@ -936,64 +936,6 @@ me">勝尾寺｜勝運の寺・达摩</div>
     </div>
     <div class="buy"><div class="buy-label">🛒 推荐购买</div>三宮老牌鲜鱼专门居酒屋（2004 年 6 月开业，食べログ 3.52 / 约 8,355 人收藏）。招牌就是刺身——每天备 15–20 种鱼，加上烤物可达 30–40 种。推荐点单：刺身盛合せ（按人数与预算配当日鲜鱼，约 ¥2,100 起）、各種お造り（每品 ¥840 起）、島根産どんちっちノドグロ（喉黑，¥2,500）、特大ボタン海老（牡丹虾，¥1,200）、隠れ名産 伝助穴子の炙り（炙烤星鳗，¥1,300）、カツオのたたき（鲣鱼叩き，¥945）、白子の天ぷら（季节限定）。店内掘式座敷 + 榻榻米吧台共 25 席，可包场（20 人以下），另收服务料 ¥200</div>
     <div class="note">⚠️ 只做晚餐，没有午餐 —— 安排在 Day4（10/5 周一）晚上，正好住三宮的 Monte Hermana，走过去很近。⚠️ 定休周二，你 10/5 是周一，**营业**。⚠️ 价格取自ホットペッパー掲載值（部分页面更新于 2009–2021 年，页面注明旧价按当时税率），实际可能已上调，到店确认。⚠️ 营业时间食べログ/ホットペッパー 均为 17:00–23:30，ヒトサラ 写 17:00–23:00，以官方登记的前者为准。神户未发现第二家同名店（ホットペッパー页标题用字写作【茶黄】，同一家）。出发前可电话 078-391-2156 确认是否临时休业</div>
-    <div class="addbar">
-      <details>
-        <summary>＋ 加入行程</summary>
-        <div class="day-picker">
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day1')">Day1 · 10/2 京都</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day2')">Day2 · 10/3 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day3')">Day3 · 10/4 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day4')">Day4 · 10/5 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day5')">Day5 · 10/6 神户</button>
-        </div>
-      </details>
-      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="shop-head">
-      <img class="shop-img" src="https://imgfp.hotp.jp/IMGH/82/90/P045618290/P045618290_480.jpg" alt="焼肉食べ放題 和牛たんじ 三宮店（Yakiniku Buffet KOBE WAGYU TANJI）｜烤肉放题">
-      <div class="shop-info">
-        <div class="shop-name">焼肉食べ放題 和牛たんじ 三宮店（Yakiniku Buffet KOBE WAGYU TANJI）｜烤肉放题</div>
-        <div class="tags"><span>美食</span><span>烤肉放题</span><span>牛舌</span><span>和牛肉寿司</span><span>三宮</span><span>全席禁煙</span></div>
-        <div class="meta">
-          <div>📍 兵庫県神戸市中央区北長狭通2-12-10 · 神戸三宮セントラルビル 6F｜地下鉄三宮駅 步行约 1 分 / 阪急神戸三宮駅 约 2 分 / JR三ノ宮駅 约 3 分 / 阪神神戸三宮駅 约 5 分｜TEL 078-515-6277</div>
-          <div>🕐 **16:00 – 23:00**（最终入店 21:30 · 料理/饮品 L.O. 21:30）· ⚠️ **没有午餐**（16 点才开门）</div>
-        </div>
-      </div>
-    </div>
-    <div class="buy"><div class="buy-label">🛒 推荐购买</div>三宮駅步行 1–2 分，2023 年 2 月开业，**全席禁煙**、可刷卡。最大卖点：**厚切仙台牛舌** 和 **和牛炙り大トロ肉寿司** 都包含在放题里；**全プラン 51 品**、手机点单、**没有单点**。5 档放题套餐（税込，**席時間 100 分／放题 L.O. 80 分**）：① **厚切り仙台牛タン食べ放題 ¥4,378** ② 赤字覚悟の厚切り仙台牛タン＆**和牛肉寿司**食べ放題 **¥4,818**（9/1 起涨价）③【神戸/関西限定·新登场】**極厚 霜降り牛タン（20mm·タン芯）**＆厚切り牛ハラミ付き **¥5,478** ④ **和牛まみれ**（厚切り牛タン＋和牛肉寿司＋和牛カルビ）**¥5,478** ⑤ **プレミアム**（マンゴーカット牛タン・和牛厚切りステーキ・黒毛和牛炙り大トロ肉寿司・和牛ロースすき焼き風）**¥6,578**。饮み放题另加：ソフトドリンク ¥748 / ライト（レモンサワー・ハイボール・焼酎）¥1,078 / スタンダード（生ビール）¥1,848。小孩：**0–5 歳免费 / 6–10 歳半价**</div>
-    <div class="note">⚠️ **时长有两种说法**：ホットペッパー（2026/09/07 更新）写「席時間 100 分／食べ放題 L.O. 80 分」，isize 等旧信息写「90 分制／L.O. 70 分」—— 到店前建议确认。饮み放题时长也不一致（官网 90 分／ホットペッパー 80 分）。⚠️ **务必预约**：网络预约可（ホットペッパー，**来店当日 15 时前**、2 名起），电话 078-515-6277；10 月预约枠**全日「即予約可」**，但高峰在 **19 时前**，建议先订。⚠️ **电子支付/二维码不可**（含微信、支付宝），**只能现金或信用卡**（VISA/Master/JCB/AMEX/Diners）。⚠️ 150 席、**仅桌席**（无包间/座敷/掘式座敷/吧台），**不可包场**；最大宴会容纳数资料不一（ホットペッパー 20 人 vs 食べログ「着席時 150 人」）。⚠️ **别走错店**：三宮这家是「和牛たんじ（たんじ／タン次郎）」连锁，**大阪天満店・栄店等是另一家分店**，同名易混。⚠️ 2023/2/1 开业，食べログ 3.34（117 条）・收藏 5,488 人，ホットペッパー 4.2（680 条）。⚠️ ビル名资料不一：官网页面标题写「西村ビル」，地址栏/食べログ/ホットペッパー 写「神戸三宮セントラルビル 6F」。⚠️ Instagram @tanjiro.kobe</div>
-    <div class="addbar">
-      <details>
-        <summary>＋ 加入行程</summary>
-        <div class="day-picker">
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day1')">Day1 · 10/2 京都</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day2')">Day2 · 10/3 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day3')">Day3 · 10/4 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day4')">Day4 · 10/5 大阪</button>
-          <button onclick="addToTrip('蟹道乐 道顿堀本店','Day5')">Day5 · 10/6 神户</button>
-        </div>
-      </details>
-      <span class="hint">点日期 → 复制命令 → 去微信发给机器人即完成排程</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="shop-head">
-      <img class="shop-img" src="https://image.ekiten.jp/contribution/old/291/3260962/2912489_20171129154813.jpg" alt="浦江亭 元町店（ウラエテイ モトマチテン）｜炭火焼肉・韓国料理">
-      <div class="shop-info">
-        <div class="shop-name">浦江亭 元町店（ウラエテイ モトマチテン）｜炭火焼肉・韓国料理</div>
-        <div class="tags"><span>美食</span><span>炭火焼肉</span><span>韓国料理</span><span>元町</span><span>高性价比</span><span>仅晚餐</span></div>
-        <div class="meta">
-          <div>📍 〒650-0012 兵庫県神戸市中央区北長狭通4-2-1 · 三和ビル 1F｜**JR元町駅東口 步行约 1 分**（阪神元町駅 约 2 分 / 地下鉄 旧居留地・大丸前駅 约 3–4 分）</div>
-          <div>🕐 平日 **17:30 – 23:00**（L.O. 22:30）｜土・日・祝 **17:00 – 23:00**（L.O. 22:30）· ⚠️ **没有午餐，只在晚上营业**</div>
-        </div>
-      </div>
-    </div>
-    <div class="buy"><div class="buy-label">🛒 推荐购买</div>JR元町駅前すぐ的**炭火焼肉・韓国料理**店。价格便宜、量又大，被评「**コスパ最強**」的大众烤肉人气店，观光途中顺路很方便。人气菜单：**黒毛和牛3種盛り**、**塩タン**、**にんにくはらみ**、ミニ冷麺；ホルモン类 **¥300 台起**、一品 **¥300–500**，另有セット（メガ盛り・ミックス盛り）。晚上才开门，适合当晚餐</div>
-    <div class="note">⚠️ **重要订正：这家是炭火焼肉／韓国料理店，不是拉面店**。食べログ・エキテン・ぐるなび・ヒトサラ・クックドア **全部标「焼肉」**；而且多次搜索都**找不到**叫「神戸らーめん 浦江亭」的拉面连锁。如果你要的是**拉面店**，那可能是另一家，请告诉我店名或链接我再查。⚠️ **全席喫煙可**（介意烟味的要注意）。⚠️ **没有午餐**，只在晚上营业。⚠️ **预约**：可（**土日祝 17:30 以后不可预约**；平日 9 人以上团体 19:00 以后不可预约）。⚠️ 44–45 席、**无包间、不可包场**、无停车场。⚠️ 资料互相矛盾：营业时间（食べログ/ぐるなび/ヒトサラ 写 平日 17:30–23:00・土日祝 17:00–23:00；エキテン/クックドア 写 平日 17:30–24:00・日祝 17:00–23:30）、定休日（无休 vs 不定休）、**没找到官网**可核对 —— 按 23:00 闭店准备比较稳。⚠️ 支付方式矛盾：食べログ 写「可刷卡・电子支付不可・二维码不可」，クックドア 写「不可刷卡」—— **带点现金稳妥**。⚠️ 食べログ ☆3.0 前后・Google 4.2。⚠️ 是否有同连锁其他分店（三宮店等）未能确认</div>
     <div class="addbar">
       <details>
         <summary>＋ 加入行程</summary>
